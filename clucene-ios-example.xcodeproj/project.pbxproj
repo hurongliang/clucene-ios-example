@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E40E313B187EA78500244639 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E40E313A187EA78500244639 /* README.md */; };
 		E4AFD694187E54DD0012BCC0 /* HURLContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4AFD693187E54DD0012BCC0 /* HURLContentViewController.m */; };
 		E4AFD696187E7A6F0012BCC0 /* highlight.js in Sources */ = {isa = PBXBuildFile; fileRef = E4AFD695187E7A6F0012BCC0 /* highlight.js */; };
 		E4AFD697187E7B8A0012BCC0 /* highlight.js in Resources */ = {isa = PBXBuildFile; fileRef = E4AFD695187E7A6F0012BCC0 /* highlight.js */; };
@@ -46,6 +47,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E40E313A187EA78500244639 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		E4AFD692187E54DD0012BCC0 /* HURLContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HURLContentViewController.h; sourceTree = "<group>"; };
 		E4AFD693187E54DD0012BCC0 /* HURLContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HURLContentViewController.m; sourceTree = "<group>"; };
 		E4AFD695187E7A6F0012BCC0 /* highlight.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = highlight.js; sourceTree = "<group>"; };
@@ -217,6 +219,7 @@
 		E4EEC667187E3A5900A682D9 = {
 			isa = PBXGroup;
 			children = (
+				E40E313A187EA78500244639 /* README.md */,
 				E4EEC679187E3A5900A682D9 /* clucene-ios-example */,
 				E4EEC698187E3A5900A682D9 /* clucene-ios-exampleTests */,
 				E4EEC672187E3A5900A682D9 /* Frameworks */,
@@ -630,6 +633,7 @@
 			files = (
 				E4AFD697187E7B8A0012BCC0 /* highlight.js in Resources */,
 				E4EEC732187E3AD800A682D9 /* e.txt in Resources */,
+				E40E313B187EA78500244639 /* README.md in Resources */,
 				E4EEC730187E3AD800A682D9 /* c.txt in Resources */,
 				E4EEC731187E3AD800A682D9 /* d.txt in Resources */,
 				E4EEC72E187E3AD800A682D9 /* a.txt in Resources */,
