@@ -51,7 +51,7 @@ using namespace lucene::queryParser;
 	}
     writer = _CLNEW IndexWriter(cIndexPath, &an, rebuildIndex);
     
-    writer->setMaxFieldLength(0x7FFFFFFFL); // LUCENE_INT32_MAX_SHOULDBE
+    writer->setMaxFieldLength(0x7FFFFFFFL);
     
     writer->setUseCompoundFile(false);
     
@@ -113,43 +113,17 @@ using namespace lucene::queryParser;
     
 }
 +(void)createDocument:(NSString*)filePath document:(Document*) doc{
-    const char* f = [filePath UTF8String];
-    TCHAR tf[CL_MAX_DIR];
-    STRCPY_AtoT(tf,f,CL_MAX_DIR);
-    doc->add( *_CLNEW Field(_T("path"), tf, Field::STORE_YES | Field::INDEX_UNTOKENIZED ) );
-    
-    NSArray *parts = [filePath componentsSeparatedByString:@"/"];
-    NSString *fileName = [parts objectAtIndex:parts.count-1];
-    const char* fn = [fileName UTF8String];
-    TCHAR tfn[CL_MAX_DIR];
-    STRCPY_AtoT(tfn,fn,CL_MAX_DIR);
-    doc->add( *_CLNEW Field(_T("fileName"), tfn, Field::STORE_YES | Field::INDEX_UNTOKENIZED ) );
-    
-    FILE* fh = fopen(f,"r");
-	if ( fh != NULL ){
-		StringBuffer str;
-		char abuf[1024];
-		TCHAR tbuf[1024];
-		size_t r;
-		do{
-			r = fread(abuf,1,1023,fh);
-			abuf[r]=0;
-			STRCPY_AtoT(tbuf,abuf,r);
-			tbuf[r]=0;
-			str.append(tbuf);
-		}while(r>0);
-		fclose(fh);
-        
-		doc->add( *_CLNEW Field(_T("contents"), str.getBuffer(), Field::STORE_YES | Field::INDEX_TOKENIZED) );
-	}
-    
-    /*
     const TCHAR* cFilePath = [self string2char:filePath];
     doc->add( *_CLNEW Field(_T("path"), cFilePath, Field::STORE_YES | Field::INDEX_UNTOKENIZED ));
     
+    NSArray *parts = [filePath componentsSeparatedByString:@"/"];
+    NSString *fileName = [parts objectAtIndex:parts.count-1];
+    const TCHAR* cFileName = [self string2char:fileName];
+    doc->add( *_CLNEW Field(_T("fileName"), cFileName, Field::STORE_YES | Field::INDEX_UNTOKENIZED ));
+    
     NSString *content = [[NSString alloc] initWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
     const TCHAR* strbuffer = [self string2char:content];
-    doc->add( *_CLNEW Field(_T("contents"), strbuffer, Field::STORE_YES | Field::INDEX_TOKENIZED) );*/
+    doc->add( *_CLNEW Field(_T("contents"), strbuffer, Field::STORE_YES | Field::INDEX_TOKENIZED) );
 }
 
 +(NSArray *)search:(NSString *)keyword{

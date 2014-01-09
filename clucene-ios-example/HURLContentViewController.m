@@ -27,10 +27,18 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    if(self.fileName){
+        self.title = self.fileName;
+    }
     if(self.filePath){
+       /*
         NSURL *url = [NSURL fileURLWithPath:self.filePath];
         NSURLRequest *request = [NSURLRequest requestWithURL:url];
         [self.webView loadRequest:request];
+        */
+        
+        NSData *data = [[NSData alloc] initWithContentsOfFile:self.filePath];
+        [self.webView loadData:data MIMEType:@"text/plain" textEncodingName:@"utf-8" baseURL:Nil];
     }
 	// Do any additional setup after loading the view.
 }

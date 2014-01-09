@@ -10,5 +10,6 @@
 
 @interface HURLContentViewController : UIViewController<UIWebViewDelegate>
 @property(strong,nonatomic)NSString *filePath;
+@property(strong,nonatomic)NSString *fileName;
 @property(strong,nonatomic)NSString *searchText;
 @end

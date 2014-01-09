@@ -17,16 +17,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XuT-BN-C92">
-                                <rect key="frame" x="0.0" y="65" width="768" height="44"/>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="XuT-BN-C92">
+                                <rect key="frame" x="0.0" y="64" width="768" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="e00-1q-Kgg"/>
                                 </connections>
                             </searchBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="brU-qg-3r6">
-                                <rect key="frame" x="0.0" y="109" width="768" height="915"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="brU-qg-3r6">
+                                <rect key="frame" x="0.0" y="108" width="768" height="916"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
@@ -36,6 +36,15 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="XuT-BN-C92" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Dxe-F7-rRt"/>
+                            <constraint firstItem="XuT-BN-C92" firstAttribute="top" secondItem="nFH-Un-zJo" secondAttribute="bottom" constant="20" symbolic="YES" id="JCM-AY-8Hi"/>
+                            <constraint firstAttribute="bottom" secondItem="brU-qg-3r6" secondAttribute="bottom" id="cQF-Bz-32b"/>
+                            <constraint firstAttribute="trailing" secondItem="XuT-BN-C92" secondAttribute="trailing" id="kub-5q-UfB"/>
+                            <constraint firstAttribute="trailing" secondItem="brU-qg-3r6" secondAttribute="trailing" id="lAP-kk-6bh"/>
+                            <constraint firstItem="brU-qg-3r6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="m4f-DH-OzP"/>
+                            <constraint firstItem="brU-qg-3r6" firstAttribute="top" secondItem="XuT-BN-C92" secondAttribute="bottom" id="nhS-Sk-wyg"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Search" id="Uuz-dO-bcH">
                         <barButtonItem key="rightBarButtonItem" title="Build Index" id="t1P-26-qb5">
@@ -66,7 +75,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zj4-0K-jIn">
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zj4-0K-jIn">
                                 <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -76,6 +85,12 @@
                             </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Zj4-0K-jIn" firstAttribute="top" secondItem="tIS-As-d6I" secondAttribute="top" id="Arw-E0-Kfi"/>
+                            <constraint firstAttribute="bottom" secondItem="Zj4-0K-jIn" secondAttribute="bottom" id="fXf-Ba-CcM"/>
+                            <constraint firstAttribute="trailing" secondItem="Zj4-0K-jIn" secondAttribute="trailing" id="uZ7-CA-t8Z"/>
+                            <constraint firstItem="Zj4-0K-jIn" firstAttribute="leading" secondItem="tIS-As-d6I" secondAttribute="leading" id="wyN-67-IMK"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Content" id="8JD-vc-uan"/>
                     <connections>

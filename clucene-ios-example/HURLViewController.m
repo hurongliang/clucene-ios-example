@@ -20,6 +20,7 @@
 @implementation HURLViewController{
     NSArray *resultList;
     NSString *showFilePath;
+    NSString *showFileName;
 }
 
 - (void)viewDidLoad
@@ -98,6 +99,7 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     NSDictionary *dict = [resultList objectAtIndex:indexPath.row];
     showFilePath = [dict objectForKey:@"path"];
+    showFileName = [dict objectForKey:@"fileName"];
     [self performSegueWithIdentifier:@"showContent" sender:self];
 }
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
@@ -105,6 +107,7 @@
         if(showFilePath){
             HURLContentViewController *vc = segue.destinationViewController;
             vc.filePath = showFilePath;
+            vc.fileName = showFileName;
             vc.searchText = self.searchBar.text;
         }
     }
