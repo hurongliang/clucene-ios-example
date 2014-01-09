@@ -1,0 +1,5 @@
+I haven't tried this yet, but it seems like you might be trying to do this the hard way. The iPhone libraries have the NSURL class, and I imagine that you could simply do:
+
+NSString *url = [NSURL URLWithString:@"http://www.google.com/a.pdf"];
+NSString *path = [url path];
+Definitely look for a built in function. The libraries have far more testing and will handle the edge cases better than anything you or I will write in an hour or two (generally speaking).

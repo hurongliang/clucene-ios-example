@@ -1,0 +1,902 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E4EEC674187E3A5900A682D9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4EEC673187E3A5900A682D9 /* Foundation.framework */; };
+		E4EEC676187E3A5900A682D9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4EEC675187E3A5900A682D9 /* CoreGraphics.framework */; };
+		E4EEC678187E3A5900A682D9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4EEC677187E3A5900A682D9 /* UIKit.framework */; };
+		E4EEC67E187E3A5900A682D9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E4EEC67C187E3A5900A682D9 /* InfoPlist.strings */; };
+		E4EEC680187E3A5900A682D9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E4EEC67F187E3A5900A682D9 /* main.m */; };
+		E4EEC684187E3A5900A682D9 /* HURLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E4EEC683187E3A5900A682D9 /* HURLAppDelegate.m */; };
+		E4EEC687187E3A5900A682D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4EEC685187E3A5900A682D9 /* Main.storyboard */; };
+		E4EEC68A187E3A5900A682D9 /* HURLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4EEC689187E3A5900A682D9 /* HURLViewController.m */; };
+		E4EEC68C187E3A5900A682D9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4EEC68B187E3A5900A682D9 /* Images.xcassets */; };
+		E4EEC693187E3A5900A682D9 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4EEC692187E3A5900A682D9 /* XCTest.framework */; };
+		E4EEC694187E3A5900A682D9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4EEC673187E3A5900A682D9 /* Foundation.framework */; };
+		E4EEC695187E3A5900A682D9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4EEC677187E3A5900A682D9 /* UIKit.framework */; };
+		E4EEC69D187E3A5900A682D9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E4EEC69B187E3A5900A682D9 /* InfoPlist.strings */; };
+		E4EEC69F187E3A5900A682D9 /* clucene_ios_exampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E4EEC69E187E3A5900A682D9 /* clucene_ios_exampleTests.m */; };
+		E4EEC727187E3A9700A682D9 /* libclucene-core-static.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4EEC725187E3A9700A682D9 /* libclucene-core-static.a */; };
+		E4EEC728187E3A9700A682D9 /* libclucene-shared-static.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4EEC726187E3A9700A682D9 /* libclucene-shared-static.a */; };
+		E4EEC72E187E3AD800A682D9 /* a.txt in Resources */ = {isa = PBXBuildFile; fileRef = E4EEC729187E3AD800A682D9 /* a.txt */; };
+		E4EEC72F187E3AD800A682D9 /* b.txt in Resources */ = {isa = PBXBuildFile; fileRef = E4EEC72A187E3AD800A682D9 /* b.txt */; };
+		E4EEC730187E3AD800A682D9 /* c.txt in Resources */ = {isa = PBXBuildFile; fileRef = E4EEC72B187E3AD800A682D9 /* c.txt */; };
+		E4EEC731187E3AD800A682D9 /* d.txt in Resources */ = {isa = PBXBuildFile; fileRef = E4EEC72C187E3AD800A682D9 /* d.txt */; };
+		E4EEC732187E3AD800A682D9 /* e.txt in Resources */ = {isa = PBXBuildFile; fileRef = E4EEC72D187E3AD800A682D9 /* e.txt */; };
+		E4EEC735187E3B0700A682D9 /* HURLCluceneHelper.mm in Sources */ = {isa = PBXBuildFile; fileRef = E4EEC734187E3B0700A682D9 /* HURLCluceneHelper.mm */; };
+		E4EEC737187E3CA500A682D9 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E4EEC736187E3CA500A682D9 /* libz.dylib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E4EEC696187E3A5900A682D9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E4EEC668187E3A5900A682D9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E4EEC66F187E3A5900A682D9;
+			remoteInfo = "clucene-ios-example";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E4EEC670187E3A5900A682D9 /* clucene-ios-example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "clucene-ios-example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4EEC673187E3A5900A682D9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		E4EEC675187E3A5900A682D9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		E4EEC677187E3A5900A682D9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		E4EEC67B187E3A5900A682D9 /* clucene-ios-example-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "clucene-ios-example-Info.plist"; sourceTree = "<group>"; };
+		E4EEC67D187E3A5900A682D9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E4EEC67F187E3A5900A682D9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E4EEC681187E3A5900A682D9 /* clucene-ios-example-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "clucene-ios-example-Prefix.pch"; sourceTree = "<group>"; };
+		E4EEC682187E3A5900A682D9 /* HURLAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HURLAppDelegate.h; sourceTree = "<group>"; };
+		E4EEC683187E3A5900A682D9 /* HURLAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HURLAppDelegate.m; sourceTree = "<group>"; };
+		E4EEC686187E3A5900A682D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E4EEC688187E3A5900A682D9 /* HURLViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HURLViewController.h; sourceTree = "<group>"; };
+		E4EEC689187E3A5900A682D9 /* HURLViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HURLViewController.m; sourceTree = "<group>"; };
+		E4EEC68B187E3A5900A682D9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		E4EEC691187E3A5900A682D9 /* clucene-ios-exampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "clucene-ios-exampleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4EEC692187E3A5900A682D9 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		E4EEC69A187E3A5900A682D9 /* clucene-ios-exampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "clucene-ios-exampleTests-Info.plist"; sourceTree = "<group>"; };
+		E4EEC69C187E3A5900A682D9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E4EEC69E187E3A5900A682D9 /* clucene_ios_exampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = clucene_ios_exampleTests.m; sourceTree = "<group>"; };
+		E4EEC6AD187E3A9700A682D9 /* AnalysisHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnalysisHeader.h; sourceTree = "<group>"; };
+		E4EEC6AE187E3A9700A682D9 /* Analyzers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Analyzers.h; sourceTree = "<group>"; };
+		E4EEC6AF187E3A9700A682D9 /* CachingTokenFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CachingTokenFilter.h; sourceTree = "<group>"; };
+		E4EEC6B1187E3A9700A682D9 /* StandardAnalyzer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StandardAnalyzer.h; sourceTree = "<group>"; };
+		E4EEC6B2187E3A9700A682D9 /* StandardFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StandardFilter.h; sourceTree = "<group>"; };
+		E4EEC6B3187E3A9700A682D9 /* StandardTokenizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StandardTokenizer.h; sourceTree = "<group>"; };
+		E4EEC6B4187E3A9700A682D9 /* StandardTokenizerConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StandardTokenizerConstants.h; sourceTree = "<group>"; };
+		E4EEC6B5187E3A9700A682D9 /* CLConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLConfig.h; sourceTree = "<group>"; };
+		E4EEC6B7187E3A9700A682D9 /* error.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = error.h; sourceTree = "<group>"; };
+		E4EEC6B8187E3A9700A682D9 /* lucenebase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lucenebase.h; sourceTree = "<group>"; };
+		E4EEC6B9187E3A9700A682D9 /* mem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mem.h; sourceTree = "<group>"; };
+		E4EEC6BB187E3A9700A682D9 /* DateField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateField.h; sourceTree = "<group>"; };
+		E4EEC6BC187E3A9700A682D9 /* DateTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateTools.h; sourceTree = "<group>"; };
+		E4EEC6BD187E3A9700A682D9 /* Document.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Document.h; sourceTree = "<group>"; };
+		E4EEC6BE187E3A9700A682D9 /* Field.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Field.h; sourceTree = "<group>"; };
+		E4EEC6BF187E3A9700A682D9 /* FieldSelector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FieldSelector.h; sourceTree = "<group>"; };
+		E4EEC6C0187E3A9700A682D9 /* NumberTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NumberTools.h; sourceTree = "<group>"; };
+		E4EEC6C2187E3A9700A682D9 /* DirectoryIndexReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirectoryIndexReader.h; sourceTree = "<group>"; };
+		E4EEC6C3187E3A9700A682D9 /* IndexDeletionPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IndexDeletionPolicy.h; sourceTree = "<group>"; };
+		E4EEC6C4187E3A9700A682D9 /* IndexModifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IndexModifier.h; sourceTree = "<group>"; };
+		E4EEC6C5187E3A9700A682D9 /* IndexReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IndexReader.h; sourceTree = "<group>"; };
+		E4EEC6C6187E3A9700A682D9 /* IndexWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IndexWriter.h; sourceTree = "<group>"; };
+		E4EEC6C7187E3A9700A682D9 /* MergePolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MergePolicy.h; sourceTree = "<group>"; };
+		E4EEC6C8187E3A9700A682D9 /* MergeScheduler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MergeScheduler.h; sourceTree = "<group>"; };
+		E4EEC6C9187E3A9700A682D9 /* MultipleTermPositions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultipleTermPositions.h; sourceTree = "<group>"; };
+		E4EEC6CA187E3A9700A682D9 /* MultiReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultiReader.h; sourceTree = "<group>"; };
+		E4EEC6CB187E3A9700A682D9 /* Payload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Payload.h; sourceTree = "<group>"; };
+		E4EEC6CC187E3A9700A682D9 /* Term.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Term.h; sourceTree = "<group>"; };
+		E4EEC6CD187E3A9700A682D9 /* Terms.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Terms.h; sourceTree = "<group>"; };
+		E4EEC6CE187E3A9700A682D9 /* TermVector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TermVector.h; sourceTree = "<group>"; };
+		E4EEC6D1187E3A9700A682D9 /* MultiFieldQueryParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultiFieldQueryParser.h; sourceTree = "<group>"; };
+		E4EEC6D2187E3A9700A682D9 /* QueryParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QueryParser.h; sourceTree = "<group>"; };
+		E4EEC6D3187E3A9700A682D9 /* QueryToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QueryToken.h; sourceTree = "<group>"; };
+		E4EEC6D4187E3A9700A682D9 /* MultiFieldQueryParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultiFieldQueryParser.h; sourceTree = "<group>"; };
+		E4EEC6D5187E3A9700A682D9 /* QueryParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QueryParser.h; sourceTree = "<group>"; };
+		E4EEC6D6187E3A9700A682D9 /* QueryParserConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QueryParserConstants.h; sourceTree = "<group>"; };
+		E4EEC6D7187E3A9700A682D9 /* QueryParserTokenManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QueryParserTokenManager.h; sourceTree = "<group>"; };
+		E4EEC6D8187E3A9700A682D9 /* QueryToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QueryToken.h; sourceTree = "<group>"; };
+		E4EEC6DA187E3A9700A682D9 /* BooleanClause.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BooleanClause.h; sourceTree = "<group>"; };
+		E4EEC6DB187E3A9700A682D9 /* BooleanQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BooleanQuery.h; sourceTree = "<group>"; };
+		E4EEC6DC187E3A9700A682D9 /* CachingSpanFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CachingSpanFilter.h; sourceTree = "<group>"; };
+		E4EEC6DD187E3A9700A682D9 /* CachingWrapperFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CachingWrapperFilter.h; sourceTree = "<group>"; };
+		E4EEC6DE187E3A9700A682D9 /* ChainedFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChainedFilter.h; sourceTree = "<group>"; };
+		E4EEC6DF187E3A9700A682D9 /* Compare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Compare.h; sourceTree = "<group>"; };
+		E4EEC6E0187E3A9700A682D9 /* ConstantScoreQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConstantScoreQuery.h; sourceTree = "<group>"; };
+		E4EEC6E1187E3A9700A682D9 /* DateFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateFilter.h; sourceTree = "<group>"; };
+		E4EEC6E2187E3A9700A682D9 /* Explanation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Explanation.h; sourceTree = "<group>"; };
+		E4EEC6E3187E3A9700A682D9 /* FieldCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FieldCache.h; sourceTree = "<group>"; };
+		E4EEC6E4187E3A9700A682D9 /* FieldDoc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FieldDoc.h; sourceTree = "<group>"; };
+		E4EEC6E5187E3A9700A682D9 /* FieldSortedHitQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FieldSortedHitQueue.h; sourceTree = "<group>"; };
+		E4EEC6E6187E3A9700A682D9 /* Filter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Filter.h; sourceTree = "<group>"; };
+		E4EEC6E7187E3A9700A682D9 /* FilteredTermEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilteredTermEnum.h; sourceTree = "<group>"; };
+		E4EEC6E8187E3A9700A682D9 /* FilterResultCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilterResultCache.h; sourceTree = "<group>"; };
+		E4EEC6E9187E3A9700A682D9 /* FuzzyQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FuzzyQuery.h; sourceTree = "<group>"; };
+		E4EEC6EA187E3A9700A682D9 /* Hits.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hits.h; sourceTree = "<group>"; };
+		E4EEC6EB187E3A9700A682D9 /* IndexSearcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IndexSearcher.h; sourceTree = "<group>"; };
+		E4EEC6EC187E3A9700A682D9 /* MatchAllDocsQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MatchAllDocsQuery.h; sourceTree = "<group>"; };
+		E4EEC6ED187E3A9700A682D9 /* MultiPhraseQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultiPhraseQuery.h; sourceTree = "<group>"; };
+		E4EEC6EE187E3A9700A682D9 /* MultiSearcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultiSearcher.h; sourceTree = "<group>"; };
+		E4EEC6EF187E3A9700A682D9 /* MultiTermQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultiTermQuery.h; sourceTree = "<group>"; };
+		E4EEC6F0187E3A9700A682D9 /* PhraseQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhraseQuery.h; sourceTree = "<group>"; };
+		E4EEC6F1187E3A9700A682D9 /* PrefixQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixQuery.h; sourceTree = "<group>"; };
+		E4EEC6F2187E3A9700A682D9 /* Query.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Query.h; sourceTree = "<group>"; };
+		E4EEC6F3187E3A9700A682D9 /* QueryFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QueryFilter.h; sourceTree = "<group>"; };
+		E4EEC6F4187E3A9700A682D9 /* RangeFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RangeFilter.h; sourceTree = "<group>"; };
+		E4EEC6F5187E3A9700A682D9 /* RangeQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RangeQuery.h; sourceTree = "<group>"; };
+		E4EEC6F6187E3A9700A682D9 /* Scorer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scorer.h; sourceTree = "<group>"; };
+		E4EEC6F7187E3A9700A682D9 /* ScorerDocQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScorerDocQueue.h; sourceTree = "<group>"; };
+		E4EEC6F8187E3A9700A682D9 /* Searchable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Searchable.h; sourceTree = "<group>"; };
+		E4EEC6F9187E3A9700A682D9 /* SearchHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchHeader.h; sourceTree = "<group>"; };
+		E4EEC6FA187E3A9700A682D9 /* Similarity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Similarity.h; sourceTree = "<group>"; };
+		E4EEC6FB187E3A9700A682D9 /* Sort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sort.h; sourceTree = "<group>"; };
+		E4EEC6FC187E3A9700A682D9 /* SpanFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpanFilter.h; sourceTree = "<group>"; };
+		E4EEC6FD187E3A9700A682D9 /* SpanFilterResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpanFilterResult.h; sourceTree = "<group>"; };
+		E4EEC6FE187E3A9700A682D9 /* SpanQueryFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpanQueryFilter.h; sourceTree = "<group>"; };
+		E4EEC6FF187E3A9700A682D9 /* TermQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TermQuery.h; sourceTree = "<group>"; };
+		E4EEC700187E3A9700A682D9 /* WildcardQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WildcardQuery.h; sourceTree = "<group>"; };
+		E4EEC701187E3A9700A682D9 /* WildcardTermEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WildcardTermEnum.h; sourceTree = "<group>"; };
+		E4EEC702187E3A9700A682D9 /* StdHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StdHeader.h; sourceTree = "<group>"; };
+		E4EEC704187E3A9700A682D9 /* Directory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Directory.h; sourceTree = "<group>"; };
+		E4EEC705187E3A9700A682D9 /* FSDirectory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSDirectory.h; sourceTree = "<group>"; };
+		E4EEC706187E3A9700A682D9 /* IndexInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IndexInput.h; sourceTree = "<group>"; };
+		E4EEC707187E3A9700A682D9 /* IndexOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IndexOutput.h; sourceTree = "<group>"; };
+		E4EEC708187E3A9700A682D9 /* Lock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Lock.h; sourceTree = "<group>"; };
+		E4EEC709187E3A9700A682D9 /* LockFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LockFactory.h; sourceTree = "<group>"; };
+		E4EEC70A187E3A9700A682D9 /* RAMDirectory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RAMDirectory.h; sourceTree = "<group>"; };
+		E4EEC70C187E3A9700A682D9 /* Array.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Array.h; sourceTree = "<group>"; };
+		E4EEC70D187E3A9700A682D9 /* BitSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BitSet.h; sourceTree = "<group>"; };
+		E4EEC70E187E3A9700A682D9 /* CLStreams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLStreams.h; sourceTree = "<group>"; };
+		E4EEC70F187E3A9700A682D9 /* Equators.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Equators.h; sourceTree = "<group>"; };
+		E4EEC710187E3A9700A682D9 /* PriorityQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PriorityQueue.h; sourceTree = "<group>"; };
+		E4EEC711187E3A9700A682D9 /* Reader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reader.h; sourceTree = "<group>"; };
+		E4EEC712187E3A9700A682D9 /* VoidList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoidList.h; sourceTree = "<group>"; };
+		E4EEC713187E3A9700A682D9 /* VoidMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoidMap.h; sourceTree = "<group>"; };
+		E4EEC714187E3A9700A682D9 /* CLucene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLucene.h; sourceTree = "<group>"; };
+		E4EEC717187E3A9700A682D9 /* _clucene-config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "_clucene-config.h"; sourceTree = "<group>"; };
+		E4EEC718187E3A9700A682D9 /* clucene-config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "clucene-config.h"; sourceTree = "<group>"; };
+		E4EEC71A187E3A9700A682D9 /* _gunichartables.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _gunichartables.h; sourceTree = "<group>"; };
+		E4EEC71B187E3A9700A682D9 /* _threads.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _threads.h; sourceTree = "<group>"; };
+		E4EEC71C187E3A9700A682D9 /* repl_tchar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = repl_tchar.h; sourceTree = "<group>"; };
+		E4EEC71D187E3A9700A682D9 /* repl_wchar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = repl_wchar.h; sourceTree = "<group>"; };
+		E4EEC71E187E3A9700A682D9 /* repl_wctype.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = repl_wctype.h; sourceTree = "<group>"; };
+		E4EEC71F187E3A9700A682D9 /* LuceneThreads.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LuceneThreads.h; sourceTree = "<group>"; };
+		E4EEC720187E3A9700A682D9 /* SharedHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SharedHeader.h; sourceTree = "<group>"; };
+		E4EEC722187E3A9700A682D9 /* dirent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dirent.h; sourceTree = "<group>"; };
+		E4EEC723187E3A9700A682D9 /* Misc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Misc.h; sourceTree = "<group>"; };
+		E4EEC724187E3A9700A682D9 /* StringBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringBuffer.h; sourceTree = "<group>"; };
+		E4EEC725187E3A9700A682D9 /* libclucene-core-static.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libclucene-core-static.a"; sourceTree = "<group>"; };
+		E4EEC726187E3A9700A682D9 /* libclucene-shared-static.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libclucene-shared-static.a"; sourceTree = "<group>"; };
+		E4EEC729187E3AD800A682D9 /* a.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = a.txt; sourceTree = "<group>"; };
+		E4EEC72A187E3AD800A682D9 /* b.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = b.txt; sourceTree = "<group>"; };
+		E4EEC72B187E3AD800A682D9 /* c.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = c.txt; sourceTree = "<group>"; };
+		E4EEC72C187E3AD800A682D9 /* d.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = d.txt; sourceTree = "<group>"; };
+		E4EEC72D187E3AD800A682D9 /* e.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = e.txt; sourceTree = "<group>"; };
+		E4EEC733187E3B0700A682D9 /* HURLCluceneHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HURLCluceneHelper.h; sourceTree = "<group>"; };
+		E4EEC734187E3B0700A682D9 /* HURLCluceneHelper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HURLCluceneHelper.mm; sourceTree = "<group>"; };
+		E4EEC736187E3CA500A682D9 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E4EEC66D187E3A5900A682D9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E4EEC737187E3CA500A682D9 /* libz.dylib in Frameworks */,
+				E4EEC727187E3A9700A682D9 /* libclucene-core-static.a in Frameworks */,
+				E4EEC728187E3A9700A682D9 /* libclucene-shared-static.a in Frameworks */,
+				E4EEC676187E3A5900A682D9 /* CoreGraphics.framework in Frameworks */,
+				E4EEC678187E3A5900A682D9 /* UIKit.framework in Frameworks */,
+				E4EEC674187E3A5900A682D9 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E4EEC68E187E3A5900A682D9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E4EEC693187E3A5900A682D9 /* XCTest.framework in Frameworks */,
+				E4EEC695187E3A5900A682D9 /* UIKit.framework in Frameworks */,
+				E4EEC694187E3A5900A682D9 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E4EEC667187E3A5900A682D9 = {
+			isa = PBXGroup;
+			children = (
+				E4EEC679187E3A5900A682D9 /* clucene-ios-example */,
+				E4EEC698187E3A5900A682D9 /* clucene-ios-exampleTests */,
+				E4EEC672187E3A5900A682D9 /* Frameworks */,
+				E4EEC671187E3A5900A682D9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E4EEC671187E3A5900A682D9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E4EEC670187E3A5900A682D9 /* clucene-ios-example.app */,
+				E4EEC691187E3A5900A682D9 /* clucene-ios-exampleTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E4EEC672187E3A5900A682D9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E4EEC736187E3CA500A682D9 /* libz.dylib */,
+				E4EEC673187E3A5900A682D9 /* Foundation.framework */,
+				E4EEC675187E3A5900A682D9 /* CoreGraphics.framework */,
+				E4EEC677187E3A5900A682D9 /* UIKit.framework */,
+				E4EEC692187E3A5900A682D9 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E4EEC679187E3A5900A682D9 /* clucene-ios-example */ = {
+			isa = PBXGroup;
+			children = (
+				E4EEC733187E3B0700A682D9 /* HURLCluceneHelper.h */,
+				E4EEC734187E3B0700A682D9 /* HURLCluceneHelper.mm */,
+				E4EEC729187E3AD800A682D9 /* a.txt */,
+				E4EEC72A187E3AD800A682D9 /* b.txt */,
+				E4EEC72B187E3AD800A682D9 /* c.txt */,
+				E4EEC72C187E3AD800A682D9 /* d.txt */,
+				E4EEC72D187E3AD800A682D9 /* e.txt */,
+				E4EEC6A8187E3A9700A682D9 /* Clucene */,
+				E4EEC682187E3A5900A682D9 /* HURLAppDelegate.h */,
+				E4EEC683187E3A5900A682D9 /* HURLAppDelegate.m */,
+				E4EEC685187E3A5900A682D9 /* Main.storyboard */,
+				E4EEC688187E3A5900A682D9 /* HURLViewController.h */,
+				E4EEC689187E3A5900A682D9 /* HURLViewController.m */,
+				E4EEC68B187E3A5900A682D9 /* Images.xcassets */,
+				E4EEC67A187E3A5900A682D9 /* Supporting Files */,
+			);
+			path = "clucene-ios-example";
+			sourceTree = "<group>";
+		};
+		E4EEC67A187E3A5900A682D9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E4EEC67B187E3A5900A682D9 /* clucene-ios-example-Info.plist */,
+				E4EEC67C187E3A5900A682D9 /* InfoPlist.strings */,
+				E4EEC67F187E3A5900A682D9 /* main.m */,
+				E4EEC681187E3A5900A682D9 /* clucene-ios-example-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E4EEC698187E3A5900A682D9 /* clucene-ios-exampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				E4EEC69E187E3A5900A682D9 /* clucene_ios_exampleTests.m */,
+				E4EEC699187E3A5900A682D9 /* Supporting Files */,
+			);
+			path = "clucene-ios-exampleTests";
+			sourceTree = "<group>";
+		};
+		E4EEC699187E3A5900A682D9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E4EEC69A187E3A5900A682D9 /* clucene-ios-exampleTests-Info.plist */,
+				E4EEC69B187E3A5900A682D9 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E4EEC6A8187E3A9700A682D9 /* Clucene */ = {
+			isa = PBXGroup;
+			children = (
+				E4EEC6A9187E3A9700A682D9 /* include */,
+				E4EEC725187E3A9700A682D9 /* libclucene-core-static.a */,
+				E4EEC726187E3A9700A682D9 /* libclucene-shared-static.a */,
+			);
+			path = Clucene;
+			sourceTree = "<group>";
+		};
+		E4EEC6A9187E3A9700A682D9 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				E4EEC6AA187E3A9700A682D9 /* core */,
+				E4EEC715187E3A9700A682D9 /* shared */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		E4EEC6AA187E3A9700A682D9 /* core */ = {
+			isa = PBXGroup;
+			children = (
+				E4EEC6AB187E3A9700A682D9 /* CLucene */,
+				E4EEC714187E3A9700A682D9 /* CLucene.h */,
+			);
+			path = core;
+			sourceTree = "<group>";
+		};
+		E4EEC6AB187E3A9700A682D9 /* CLucene */ = {
+			isa = PBXGroup;
+			children = (
+				E4EEC6AC187E3A9700A682D9 /* analysis */,
+				E4EEC6B5187E3A9700A682D9 /* CLConfig.h */,
+				E4EEC6B6187E3A9700A682D9 /* debug */,
+				E4EEC6BA187E3A9700A682D9 /* document */,
+				E4EEC6C1187E3A9700A682D9 /* index */,
+				E4EEC6CF187E3A9700A682D9 /* queryParser */,
+				E4EEC6D9187E3A9700A682D9 /* search */,
+				E4EEC702187E3A9700A682D9 /* StdHeader.h */,
+				E4EEC703187E3A9700A682D9 /* store */,
+				E4EEC70B187E3A9700A682D9 /* util */,
+			);
+			path = CLucene;
+			sourceTree = "<group>";
+		};
+		E4EEC6AC187E3A9700A682D9 /* analysis */ = {
+			isa = PBXGroup;
+			children = (
+				E4EEC6AD187E3A9700A682D9 /* AnalysisHeader.h */,
+				E4EEC6AE187E3A9700A682D9 /* Analyzers.h */,
+				E4EEC6AF187E3A9700A682D9 /* CachingTokenFilter.h */,
+				E4EEC6B0187E3A9700A682D9 /* standard */,
+			);
+			path = analysis;
+			sourceTree = "<group>";
+		};
+		E4EEC6B0187E3A9700A682D9 /* standard */ = {
+			isa = PBXGroup;
+			children = (
+				E4EEC6B1187E3A9700A682D9 /* StandardAnalyzer.h */,
+				E4EEC6B2187E3A9700A682D9 /* StandardFilter.h */,
+				E4EEC6B3187E3A9700A682D9 /* StandardTokenizer.h */,
+				E4EEC6B4187E3A9700A682D9 /* StandardTokenizerConstants.h */,
+			);
+			path = standard;
+			sourceTree = "<group>";
+		};
+		E4EEC6B6187E3A9700A682D9 /* debug */ = {
+			isa = PBXGroup;
+			children = (
+				E4EEC6B7187E3A9700A682D9 /* error.h */,
+				E4EEC6B8187E3A9700A682D9 /* lucenebase.h */,
+				E4EEC6B9187E3A9700A682D9 /* mem.h */,
+			);
+			path = debug;
+			sourceTree = "<group>";
+		};
+		E4EEC6BA187E3A9700A682D9 /* document */ = {
+			isa = PBXGroup;
+			children = (
+				E4EEC6BB187E3A9700A682D9 /* DateField.h */,
+				E4EEC6BC187E3A9700A682D9 /* DateTools.h */,
+				E4EEC6BD187E3A9700A682D9 /* Document.h */,
+				E4EEC6BE187E3A9700A682D9 /* Field.h */,
+				E4EEC6BF187E3A9700A682D9 /* FieldSelector.h */,
+				E4EEC6C0187E3A9700A682D9 /* NumberTools.h */,
+			);
+			path = document;
+			sourceTree = "<group>";
+		};
+		E4EEC6C1187E3A9700A682D9 /* index */ = {
+			isa = PBXGroup;
+			children = (
+				E4EEC6C2187E3A9700A682D9 /* DirectoryIndexReader.h */,
+				E4EEC6C3187E3A9700A682D9 /* IndexDeletionPolicy.h */,
+				E4EEC6C4187E3A9700A682D9 /* IndexModifier.h */,
+				E4EEC6C5187E3A9700A682D9 /* IndexReader.h */,
+				E4EEC6C6187E3A9700A682D9 /* IndexWriter.h */,
+				E4EEC6C7187E3A9700A682D9 /* MergePolicy.h */,
+				E4EEC6C8187E3A9700A682D9 /* MergeScheduler.h */,
+				E4EEC6C9187E3A9700A682D9 /* MultipleTermPositions.h */,
+				E4EEC6CA187E3A9700A682D9 /* MultiReader.h */,
+				E4EEC6CB187E3A9700A682D9 /* Payload.h */,
+				E4EEC6CC187E3A9700A682D9 /* Term.h */,
+				E4EEC6CD187E3A9700A682D9 /* Terms.h */,
+				E4EEC6CE187E3A9700A682D9 /* TermVector.h */,
+			);
+			path = index;
+			sourceTree = "<group>";
+		};
+		E4EEC6CF187E3A9700A682D9 /* queryParser */ = {
+			isa = PBXGroup;
+			children = (
+				E4EEC6D0187E3A9700A682D9 /* legacy */,
+				E4EEC6D4187E3A9700A682D9 /* MultiFieldQueryParser.h */,
+				E4EEC6D5187E3A9700A682D9 /* QueryParser.h */,
+				E4EEC6D6187E3A9700A682D9 /* QueryParserConstants.h */,
+				E4EEC6D7187E3A9700A682D9 /* QueryParserTokenManager.h */,
+				E4EEC6D8187E3A9700A682D9 /* QueryToken.h */,
+			);
+			path = queryParser;
+			sourceTree = "<group>";
+		};
+		E4EEC6D0187E3A9700A682D9 /* legacy */ = {
+			isa = PBXGroup;
+			children = (
+				E4EEC6D1187E3A9700A682D9 /* MultiFieldQueryParser.h */,
+				E4EEC6D2187E3A9700A682D9 /* QueryParser.h */,
+				E4EEC6D3187E3A9700A682D9 /* QueryToken.h */,
+			);
+			path = legacy;
+			sourceTree = "<group>";
+		};
+		E4EEC6D9187E3A9700A682D9 /* search */ = {
+			isa = PBXGroup;
+			children = (
+				E4EEC6DA187E3A9700A682D9 /* BooleanClause.h */,
+				E4EEC6DB187E3A9700A682D9 /* BooleanQuery.h */,
+				E4EEC6DC187E3A9700A682D9 /* CachingSpanFilter.h */,
+				E4EEC6DD187E3A9700A682D9 /* CachingWrapperFilter.h */,
+				E4EEC6DE187E3A9700A682D9 /* ChainedFilter.h */,
+				E4EEC6DF187E3A9700A682D9 /* Compare.h */,
+				E4EEC6E0187E3A9700A682D9 /* ConstantScoreQuery.h */,
+				E4EEC6E1187E3A9700A682D9 /* DateFilter.h */,
+				E4EEC6E2187E3A9700A682D9 /* Explanation.h */,
+				E4EEC6E3187E3A9700A682D9 /* FieldCache.h */,
+				E4EEC6E4187E3A9700A682D9 /* FieldDoc.h */,
+				E4EEC6E5187E3A9700A682D9 /* FieldSortedHitQueue.h */,
+				E4EEC6E6187E3A9700A682D9 /* Filter.h */,
+				E4EEC6E7187E3A9700A682D9 /* FilteredTermEnum.h */,
+				E4EEC6E8187E3A9700A682D9 /* FilterResultCache.h */,
+				E4EEC6E9187E3A9700A682D9 /* FuzzyQuery.h */,
+				E4EEC6EA187E3A9700A682D9 /* Hits.h */,
+				E4EEC6EB187E3A9700A682D9 /* IndexSearcher.h */,
+				E4EEC6EC187E3A9700A682D9 /* MatchAllDocsQuery.h */,
+				E4EEC6ED187E3A9700A682D9 /* MultiPhraseQuery.h */,
+				E4EEC6EE187E3A9700A682D9 /* MultiSearcher.h */,
+				E4EEC6EF187E3A9700A682D9 /* MultiTermQuery.h */,
+				E4EEC6F0187E3A9700A682D9 /* PhraseQuery.h */,
+				E4EEC6F1187E3A9700A682D9 /* PrefixQuery.h */,
+				E4EEC6F2187E3A9700A682D9 /* Query.h */,
+				E4EEC6F3187E3A9700A682D9 /* QueryFilter.h */,
+				E4EEC6F4187E3A9700A682D9 /* RangeFilter.h */,
+				E4EEC6F5187E3A9700A682D9 /* RangeQuery.h */,
+				E4EEC6F6187E3A9700A682D9 /* Scorer.h */,
+				E4EEC6F7187E3A9700A682D9 /* ScorerDocQueue.h */,
+				E4EEC6F8187E3A9700A682D9 /* Searchable.h */,
+				E4EEC6F9187E3A9700A682D9 /* SearchHeader.h */,
+				E4EEC6FA187E3A9700A682D9 /* Similarity.h */,
+				E4EEC6FB187E3A9700A682D9 /* Sort.h */,
+				E4EEC6FC187E3A9700A682D9 /* SpanFilter.h */,
+				E4EEC6FD187E3A9700A682D9 /* SpanFilterResult.h */,
+				E4EEC6FE187E3A9700A682D9 /* SpanQueryFilter.h */,
+				E4EEC6FF187E3A9700A682D9 /* TermQuery.h */,
+				E4EEC700187E3A9700A682D9 /* WildcardQuery.h */,
+				E4EEC701187E3A9700A682D9 /* WildcardTermEnum.h */,
+			);
+			path = search;
+			sourceTree = "<group>";
+		};
+		E4EEC703187E3A9700A682D9 /* store */ = {
+			isa = PBXGroup;
+			children = (
+				E4EEC704187E3A9700A682D9 /* Directory.h */,
+				E4EEC705187E3A9700A682D9 /* FSDirectory.h */,
+				E4EEC706187E3A9700A682D9 /* IndexInput.h */,
+				E4EEC707187E3A9700A682D9 /* IndexOutput.h */,
+				E4EEC708187E3A9700A682D9 /* Lock.h */,
+				E4EEC709187E3A9700A682D9 /* LockFactory.h */,
+				E4EEC70A187E3A9700A682D9 /* RAMDirectory.h */,
+			);
+			path = store;
+			sourceTree = "<group>";
+		};
+		E4EEC70B187E3A9700A682D9 /* util */ = {
+			isa = PBXGroup;
+			children = (
+				E4EEC70C187E3A9700A682D9 /* Array.h */,
+				E4EEC70D187E3A9700A682D9 /* BitSet.h */,
+				E4EEC70E187E3A9700A682D9 /* CLStreams.h */,
+				E4EEC70F187E3A9700A682D9 /* Equators.h */,
+				E4EEC710187E3A9700A682D9 /* PriorityQueue.h */,
+				E4EEC711187E3A9700A682D9 /* Reader.h */,
+				E4EEC712187E3A9700A682D9 /* VoidList.h */,
+				E4EEC713187E3A9700A682D9 /* VoidMap.h */,
+			);
+			path = util;
+			sourceTree = "<group>";
+		};
+		E4EEC715187E3A9700A682D9 /* shared */ = {
+			isa = PBXGroup;
+			children = (
+				E4EEC716187E3A9700A682D9 /* CLucene */,
+			);
+			path = shared;
+			sourceTree = "<group>";
+		};
+		E4EEC716187E3A9700A682D9 /* CLucene */ = {
+			isa = PBXGroup;
+			children = (
+				E4EEC717187E3A9700A682D9 /* _clucene-config.h */,
+				E4EEC718187E3A9700A682D9 /* clucene-config.h */,
+				E4EEC719187E3A9700A682D9 /* config */,
+				E4EEC71F187E3A9700A682D9 /* LuceneThreads.h */,
+				E4EEC720187E3A9700A682D9 /* SharedHeader.h */,
+				E4EEC721187E3A9700A682D9 /* util */,
+			);
+			path = CLucene;
+			sourceTree = "<group>";
+		};
+		E4EEC719187E3A9700A682D9 /* config */ = {
+			isa = PBXGroup;
+			children = (
+				E4EEC71A187E3A9700A682D9 /* _gunichartables.h */,
+				E4EEC71B187E3A9700A682D9 /* _threads.h */,
+				E4EEC71C187E3A9700A682D9 /* repl_tchar.h */,
+				E4EEC71D187E3A9700A682D9 /* repl_wchar.h */,
+				E4EEC71E187E3A9700A682D9 /* repl_wctype.h */,
+			);
+			path = config;
+			sourceTree = "<group>";
+		};
+		E4EEC721187E3A9700A682D9 /* util */ = {
+			isa = PBXGroup;
+			children = (
+				E4EEC722187E3A9700A682D9 /* dirent.h */,
+				E4EEC723187E3A9700A682D9 /* Misc.h */,
+				E4EEC724187E3A9700A682D9 /* StringBuffer.h */,
+			);
+			path = util;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E4EEC66F187E3A5900A682D9 /* clucene-ios-example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E4EEC6A2187E3A5900A682D9 /* Build configuration list for PBXNativeTarget "clucene-ios-example" */;
+			buildPhases = (
+				E4EEC66C187E3A5900A682D9 /* Sources */,
+				E4EEC66D187E3A5900A682D9 /* Frameworks */,
+				E4EEC66E187E3A5900A682D9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "clucene-ios-example";
+			productName = "clucene-ios-example";
+			productReference = E4EEC670187E3A5900A682D9 /* clucene-ios-example.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E4EEC690187E3A5900A682D9 /* clucene-ios-exampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E4EEC6A5187E3A5900A682D9 /* Build configuration list for PBXNativeTarget "clucene-ios-exampleTests" */;
+			buildPhases = (
+				E4EEC68D187E3A5900A682D9 /* Sources */,
+				E4EEC68E187E3A5900A682D9 /* Frameworks */,
+				E4EEC68F187E3A5900A682D9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E4EEC697187E3A5900A682D9 /* PBXTargetDependency */,
+			);
+			name = "clucene-ios-exampleTests";
+			productName = "clucene-ios-exampleTests";
+			productReference = E4EEC691187E3A5900A682D9 /* clucene-ios-exampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E4EEC668187E3A5900A682D9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = HURL;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = hurongliang.com;
+				TargetAttributes = {
+					E4EEC690187E3A5900A682D9 = {
+						TestTargetID = E4EEC66F187E3A5900A682D9;
+					};
+				};
+			};
+			buildConfigurationList = E4EEC66B187E3A5900A682D9 /* Build configuration list for PBXProject "clucene-ios-example" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E4EEC667187E3A5900A682D9;
+			productRefGroup = E4EEC671187E3A5900A682D9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E4EEC66F187E3A5900A682D9 /* clucene-ios-example */,
+				E4EEC690187E3A5900A682D9 /* clucene-ios-exampleTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E4EEC66E187E3A5900A682D9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E4EEC732187E3AD800A682D9 /* e.txt in Resources */,
+				E4EEC730187E3AD800A682D9 /* c.txt in Resources */,
+				E4EEC731187E3AD800A682D9 /* d.txt in Resources */,
+				E4EEC72E187E3AD800A682D9 /* a.txt in Resources */,
+				E4EEC68C187E3A5900A682D9 /* Images.xcassets in Resources */,
+				E4EEC67E187E3A5900A682D9 /* InfoPlist.strings in Resources */,
+				E4EEC72F187E3AD800A682D9 /* b.txt in Resources */,
+				E4EEC687187E3A5900A682D9 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E4EEC68F187E3A5900A682D9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E4EEC69D187E3A5900A682D9 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E4EEC66C187E3A5900A682D9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E4EEC68A187E3A5900A682D9 /* HURLViewController.m in Sources */,
+				E4EEC680187E3A5900A682D9 /* main.m in Sources */,
+				E4EEC735187E3B0700A682D9 /* HURLCluceneHelper.mm in Sources */,
+				E4EEC684187E3A5900A682D9 /* HURLAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E4EEC68D187E3A5900A682D9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E4EEC69F187E3A5900A682D9 /* clucene_ios_exampleTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E4EEC697187E3A5900A682D9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E4EEC66F187E3A5900A682D9 /* clucene-ios-example */;
+			targetProxy = E4EEC696187E3A5900A682D9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E4EEC67C187E3A5900A682D9 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E4EEC67D187E3A5900A682D9 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		E4EEC685187E3A5900A682D9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E4EEC686187E3A5900A682D9 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E4EEC69B187E3A5900A682D9 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E4EEC69C187E3A5900A682D9 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E4EEC6A0187E3A5900A682D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"${SRCROOT}/clucene-ios-example/Clucene/include/core",
+					"${SRCROOT}/clucene-ios-example/Clucene/include/shared",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		E4EEC6A1187E3A5900A682D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"${SRCROOT}/clucene-ios-example/Clucene/include/core",
+					"${SRCROOT}/clucene-ios-example/Clucene/include/shared",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E4EEC6A3187E3A5900A682D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "clucene-ios-example/clucene-ios-example-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+				);
+				INFOPLIST_FILE = "clucene-ios-example/clucene-ios-example-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/Ron/Documents/xcode/clucene-ios-example/clucene-ios-example/Clucene",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		E4EEC6A4187E3A5900A682D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "clucene-ios-example/clucene-ios-example-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+				);
+				INFOPLIST_FILE = "clucene-ios-example/clucene-ios-example-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/Ron/Documents/xcode/clucene-ios-example/clucene-ios-example/Clucene",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		E4EEC6A6187E3A5900A682D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/clucene-ios-example.app/clucene-ios-example";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "clucene-ios-example/clucene-ios-example-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "clucene-ios-exampleTests/clucene-ios-exampleTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		E4EEC6A7187E3A5900A682D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/clucene-ios-example.app/clucene-ios-example";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "clucene-ios-example/clucene-ios-example-Prefix.pch";
+				INFOPLIST_FILE = "clucene-ios-exampleTests/clucene-ios-exampleTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E4EEC66B187E3A5900A682D9 /* Build configuration list for PBXProject "clucene-ios-example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E4EEC6A0187E3A5900A682D9 /* Debug */,
+				E4EEC6A1187E3A5900A682D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E4EEC6A2187E3A5900A682D9 /* Build configuration list for PBXNativeTarget "clucene-ios-example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E4EEC6A3187E3A5900A682D9 /* Debug */,
+				E4EEC6A4187E3A5900A682D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		E4EEC6A5187E3A5900A682D9 /* Build configuration list for PBXNativeTarget "clucene-ios-exampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E4EEC6A6187E3A5900A682D9 /* Debug */,
+				E4EEC6A7187E3A5900A682D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E4EEC668187E3A5900A682D9 /* Project object */;
+}

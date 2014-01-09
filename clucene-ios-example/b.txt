@@ -1,0 +1,16 @@
+Try this:
+
+NSString *url = @"http://www.google.com/a.pdf";
+NSArray *parts = [url componentsSeparatedByString:@"/"];
+NSString *filename = [parts objectAtIndex:[parts count]-1];
+share|improve this answer
+answered Mar 14 '10 at 1:38
+
+DyingCactus
+11.7k12430
+28	  	
+NSString *filename = [parts lastObject]; –  thomax May 26 '10 at 6:59
+ 	
+@thomax: Thanks, that looks cleaner. –  DyingCactus May 26 '10 at 12:22
+2	  	
+If you must go with splitting the path into parts, at least use pathComponents rather than componentsSeparatedByString. But one of the other methods below would be better anyway. –  Joe Strout Aug 14 '13 at 0:59

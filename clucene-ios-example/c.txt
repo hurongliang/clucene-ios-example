@@ -1,0 +1,13 @@
+h1 can reuturn the coorect string a.pdf, but if it returns to the codes where it was called, after a while system reports 'double free * set a breakpoint in malloc_error_break to debug'
+
+I checked a long time and foudn that if I removed the code
+
+ttt=[s0 substringWithRange:NSMakeRange(i, 1)];
+
+everything will be Ok (of course getSubStringAfterH can not returns the corrent result I expected.), no error reported.
+
+I try to fix the bug a few hours, but still no clue.
+
+Welcome any comment
+
+Thanks interdev
