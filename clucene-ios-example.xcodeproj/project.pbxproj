@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E4AFD694187E54DD0012BCC0 /* HURLContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4AFD693187E54DD0012BCC0 /* HURLContentViewController.m */; };
+		E4AFD696187E7A6F0012BCC0 /* highlight.js in Sources */ = {isa = PBXBuildFile; fileRef = E4AFD695187E7A6F0012BCC0 /* highlight.js */; };
+		E4AFD697187E7B8A0012BCC0 /* highlight.js in Resources */ = {isa = PBXBuildFile; fileRef = E4AFD695187E7A6F0012BCC0 /* highlight.js */; };
 		E4EEC674187E3A5900A682D9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4EEC673187E3A5900A682D9 /* Foundation.framework */; };
 		E4EEC676187E3A5900A682D9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4EEC675187E3A5900A682D9 /* CoreGraphics.framework */; };
 		E4EEC678187E3A5900A682D9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4EEC677187E3A5900A682D9 /* UIKit.framework */; };
@@ -43,6 +46,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E4AFD692187E54DD0012BCC0 /* HURLContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HURLContentViewController.h; sourceTree = "<group>"; };
+		E4AFD693187E54DD0012BCC0 /* HURLContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HURLContentViewController.m; sourceTree = "<group>"; };
+		E4AFD695187E7A6F0012BCC0 /* highlight.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = highlight.js; sourceTree = "<group>"; };
 		E4EEC670187E3A5900A682D9 /* clucene-ios-example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "clucene-ios-example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4EEC673187E3A5900A682D9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E4EEC675187E3A5900A682D9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -242,6 +248,7 @@
 		E4EEC679187E3A5900A682D9 /* clucene-ios-example */ = {
 			isa = PBXGroup;
 			children = (
+				E4AFD695187E7A6F0012BCC0 /* highlight.js */,
 				E4EEC733187E3B0700A682D9 /* HURLCluceneHelper.h */,
 				E4EEC734187E3B0700A682D9 /* HURLCluceneHelper.mm */,
 				E4EEC729187E3AD800A682D9 /* a.txt */,
@@ -257,6 +264,8 @@
 				E4EEC689187E3A5900A682D9 /* HURLViewController.m */,
 				E4EEC68B187E3A5900A682D9 /* Images.xcassets */,
 				E4EEC67A187E3A5900A682D9 /* Supporting Files */,
+				E4AFD692187E54DD0012BCC0 /* HURLContentViewController.h */,
+				E4AFD693187E54DD0012BCC0 /* HURLContentViewController.m */,
 			);
 			path = "clucene-ios-example";
 			sourceTree = "<group>";
@@ -619,6 +628,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4AFD697187E7B8A0012BCC0 /* highlight.js in Resources */,
 				E4EEC732187E3AD800A682D9 /* e.txt in Resources */,
 				E4EEC730187E3AD800A682D9 /* c.txt in Resources */,
 				E4EEC731187E3AD800A682D9 /* d.txt in Resources */,
@@ -645,8 +655,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4AFD694187E54DD0012BCC0 /* HURLContentViewController.m in Sources */,
 				E4EEC68A187E3A5900A682D9 /* HURLViewController.m in Sources */,
 				E4EEC680187E3A5900A682D9 /* main.m in Sources */,
+				E4AFD696187E7A6F0012BCC0 /* highlight.js in Sources */,
 				E4EEC735187E3B0700A682D9 /* HURLCluceneHelper.mm in Sources */,
 				E4EEC684187E3A5900A682D9 /* HURLAppDelegate.m in Sources */,
 			);
@@ -887,6 +899,7 @@
 				E4EEC6A4187E3A5900A682D9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E4EEC6A5187E3A5900A682D9 /* Build configuration list for PBXNativeTarget "clucene-ios-exampleTests" */ = {
 			isa = XCConfigurationList;
@@ -895,6 +908,7 @@
 				E4EEC6A7187E3A5900A682D9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

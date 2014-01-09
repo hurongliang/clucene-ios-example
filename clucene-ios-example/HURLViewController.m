@@ -8,6 +8,7 @@
 
 #import "HURLViewController.h"
 #import "HURLCluceneHelper.h"
+#import "HURLContentViewController.h"
 
 @interface HURLViewController ()
 @property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
@@ -18,6 +19,7 @@
 
 @implementation HURLViewController{
     NSArray *resultList;
+    NSString *showFilePath;
 }
 
 - (void)viewDidLoad
@@ -82,9 +84,7 @@
     
     NSLog(@"Build index success!");
 }
--(void)searchBarTextDidEndEditing:(UISearchBar *)searchBar{
-    [self doSearch:searchBar.text];
-}
+
 -(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar{
     [self doSearch:searchBar.text];
 }
@@ -93,6 +93,20 @@
         resultList = [HURLCluceneHelper search:searchText];
         NSLog(@"Search result count %d",resultList.count);
         [self.tableView reloadData];
+    }
+}
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSDictionary *dict = [resultList objectAtIndex:indexPath.row];
+    showFilePath = [dict objectForKey:@"path"];
+    [self performSegueWithIdentifier:@"showContent" sender:self];
+}
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if([segue.identifier isEqualToString:@"showContent"]){
+        if(showFilePath){
+            HURLContentViewController *vc = segue.destinationViewController;
+            vc.filePath = showFilePath;
+            vc.searchText = self.searchBar.text;
+        }
     }
 }
 @end

@@ -50,7 +50,6 @@ using namespace lucene::queryParser;
         }
 	}
     writer = _CLNEW IndexWriter(cIndexPath, &an, rebuildIndex);
-    //IndexWriter* writer = _CLNEW IndexWriter(cIndexPath, &an, true);
     
     writer->setMaxFieldLength(0x7FFFFFFFL); // LUCENE_INT32_MAX_SHOULDBE
     
@@ -58,7 +57,6 @@ using namespace lucene::queryParser;
     
 	Document doc;
     [self createDocument:filePath document:&doc];
-//    createDocument(filePath, &doc);
     writer->addDocument( &doc);
 	
     writer->setUseCompoundFile(true);
@@ -94,9 +92,8 @@ using namespace lucene::queryParser;
         }
         writer = _CLNEW IndexWriter(cIndexPath, &an, false);
     }
-    //IndexWriter* writer = _CLNEW IndexWriter(cIndexPath, &an, true);
     
-    writer->setMaxFieldLength(0x7FFFFFFFL); // LUCENE_INT32_MAX_SHOULDBE
+    writer->setMaxFieldLength(0x7FFFFFFFL);
     
     writer->setUseCompoundFile(false);
     
@@ -117,11 +114,10 @@ using namespace lucene::queryParser;
 }
 +(void)createDocument:(NSString*)filePath document:(Document*) doc{
     const char* f = [filePath UTF8String];
-    // Add the path of the file as a field named "path".  Use an indexed and stored field, so
-    // that the index stores the path, and so that the path is searchable.
     TCHAR tf[CL_MAX_DIR];
     STRCPY_AtoT(tf,f,CL_MAX_DIR);
     doc->add( *_CLNEW Field(_T("path"), tf, Field::STORE_YES | Field::INDEX_UNTOKENIZED ) );
+    
     NSArray *parts = [filePath componentsSeparatedByString:@"/"];
     NSString *fileName = [parts objectAtIndex:parts.count-1];
     const char* fn = [fileName UTF8String];
@@ -129,15 +125,6 @@ using namespace lucene::queryParser;
     STRCPY_AtoT(tfn,fn,CL_MAX_DIR);
     doc->add( *_CLNEW Field(_T("fileName"), tfn, Field::STORE_YES | Field::INDEX_UNTOKENIZED ) );
     
-    // Add the last modified date of the file a field named "modified". Again, we make it
-    // searchable, but no attempt is made to tokenize the field into words.
-    //doc->add( *_CLNEW Field(_T("modified"), DateTools::timeToString(f->lastModified()), Field::STORE_YES | Field::INDEX_NO));
-    
-    // Add the contents of the file a field named "contents".  This time we use a tokenized
-	// field so that the text can be searched for words in it.
-    
-    // Here we read the data without any encoding. If you want to use special encoding
-    // see the contrib/jstreams - they contain various types of stream readers
     FILE* fh = fopen(f,"r");
 	if ( fh != NULL ){
 		StringBuffer str;
@@ -244,19 +231,11 @@ using namespace lucene::queryParser;
     NSString *documentsDirectory = [paths objectAtIndex:0];
     return documentsDirectory;
 }
-+(NSString*)tchar2string:(const wchar_t*) inStr{
-    return [[NSString alloc] initWithBytes:inStr length:wcslen(inStr)*sizeof(TCHAR) encoding:NSUTF8StringEncoding];
-    /*setlocale(LC_CTYPE, "UTF-8");
-    int strLength = wcslen(inStr);
-    int bufferSize = (strLength+1)*4;
-    char *stTmp = (char*)malloc(bufferSize);
-    memset(stTmp, 0, bufferSize);
-    wcstombs(stTmp, inStr, strLength);
-    NSString* ret = [[NSString alloc] initWithBytes:stTmp length:strlen(stTmp) encoding:NSUTF8StringEncoding];
-    free(stTmp);
-    return ret;*/
++(NSString*)tchar2string:(const TCHAR*) inStr{
+    return [[NSString alloc] initWithBytes:inStr length:wcslen(inStr)*sizeof(TCHAR) encoding:NSUTF32LittleEndianStringEncoding];
+    
 }
 +(const TCHAR*)string2char:(NSString *)str{
-    return (const TCHAR*)[str cStringUsingEncoding:NSUTF8StringEncoding];
+    return (const TCHAR*)[str cStringUsingEncoding:NSUTF32LittleEndianStringEncoding];
 }
 @end

@@ -47,11 +47,44 @@
                     <connections>
                         <outlet property="searchBar" destination="XuT-BN-C92" id="UNo-eE-p5L"/>
                         <outlet property="tableView" destination="brU-qg-3r6" id="v3P-iK-NhR"/>
+                        <segue destination="N9P-yd-rSu" kind="push" identifier="showContent" id="VrX-o7-3JA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1152" y="-230"/>
+        </scene>
+        <!--Content View Controller - Content-->
+        <scene sceneID="6BR-9X-uSq">
+            <objects>
+                <viewController id="N9P-yd-rSu" customClass="HURLContentViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="iBu-Kf-sfK"/>
+                        <viewControllerLayoutGuide type="bottom" id="Rri-mE-e2u"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tIS-As-d6I">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zj4-0K-jIn">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="N9P-yd-rSu" id="5u4-Qt-Rxj"/>
+                                </connections>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Content" id="8JD-vc-uan"/>
+                    <connections>
+                        <outlet property="webView" destination="Zj4-0K-jIn" id="eBB-fk-oEx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wpw-HW-gtE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2104" y="-545"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Hpe-up-DS0">
