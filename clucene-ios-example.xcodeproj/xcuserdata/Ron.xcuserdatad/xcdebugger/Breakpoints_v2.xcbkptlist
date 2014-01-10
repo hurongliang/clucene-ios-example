@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "clucene-ios-example/HURLCluceneHelper.mm"
-            timestampString = "410944402.912868"
+            timestampString = "411013874.568073"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "166"
-            endingLineNumber = "166"
+            startingLineNumber = "160"
+            endingLineNumber = "160"
             landmarkName = "+search:"
             landmarkType = "5">
          </BreakpointContent>
@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "clucene-ios-example/HURLCluceneHelper.mm"
-            timestampString = "410945807.199981"
+            timestampString = "411013874.568073"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "209"
-            endingLineNumber = "209"
+            startingLineNumber = "203"
+            endingLineNumber = "203"
             landmarkName = "+tchar2string:"
             landmarkType = "5">
          </BreakpointContent>
@@ -74,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "clucene-ios-example/HURLCluceneHelper.mm"
-            timestampString = "410945807.199981"
+            timestampString = "411013874.568073"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "213"
-            endingLineNumber = "213"
+            startingLineNumber = "207"
+            endingLineNumber = "207"
             landmarkName = "+string2char:"
             landmarkType = "5">
             <Locations>
@@ -203,6 +203,22 @@
                   offsetFromSymbolStart = "977">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "clucene-ios-example/HURLCluceneHelper.mm"
+            timestampString = "411013874.568073"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "154"
+            endingLineNumber = "154"
+            landmarkName = "+search:"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -135,28 +135,22 @@ using namespace lucene::queryParser;
         return nil;
     }
     try{
-        const char* text = [keyword UTF8String];
-        const char* index = [indexPath UTF8String];
-        standard::StandardAnalyzer analyzer;
-        TCHAR* buf;
+        const char* cIndexPath = [indexPath UTF8String];
         
-        IndexReader* reader = IndexReader::open(index);
+        IndexReader* reader = IndexReader::open(cIndexPath);
         IndexReader* newreader = reader->reopen();
         if ( newreader != reader ){
             _CLLDELETE(reader);
             reader = newreader;
         }
+        
+        standard::StandardAnalyzer analyzer;
+        const TCHAR *cKeyword = [self string2char:keyword];
+        Query* q = QueryParser::parse(cKeyword,_T("contents"),&analyzer);
+        
         IndexSearcher s(reader);
-        int length = strlen(text);
-        TCHAR *tline = (TCHAR*)calloc(length, sizeof(TCHAR));
-        STRCPY_AtoT(tline,text,length);
-        const TCHAR* content = _T("contents");
-        Query* q = QueryParser::parse(tline,content,&analyzer);
-        
-        buf = q->toString(content);
-        _CLDELETE_LCARRAY(buf);
-        
         Hits* h = s.search(q);
+        
         int hLength = h->length();
         for ( size_t i=0;i<hLength;i++ ){
             Document* doc = &h->doc(i);
@@ -212,4 +206,13 @@ using namespace lucene::queryParser;
 +(const TCHAR*)string2char:(NSString *)str{
     return (const TCHAR*)[str cStringUsingEncoding:NSUTF32LittleEndianStringEncoding];
 }
+/*
++(const char*)wchar2char(const TCHAR* wchar){
+    std::wstring_convert<std::codecvt_utf8<wchar_t>,wchar_t> convert;
+    
+    wchar_t const *ws = L"Steve Nash";
+    std::string s = convert.to_bytes(ws);
+    char const *cs = s.c_str();
+}
+ */
 @end
