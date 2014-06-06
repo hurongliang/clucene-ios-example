@@ -9,6 +9,7 @@
 #import "HURLViewController.h"
 #import "HURLCluceneHelper.h"
 #import "HURLContentViewController.h"
+#import "HURLPathUtils.h"
 
 @interface HURLViewController ()
 @property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
@@ -52,33 +53,7 @@
     return 1;
 }
 - (IBAction)buildIndex:(UIBarButtonItem *)sender {
-    NSString *documentPath = [HURLCluceneHelper getDocumentPath];
-    NSString *dataPath = [documentPath stringByAppendingPathComponent:@"data"];
-    NSFileManager *fileManager = [NSFileManager defaultManager];
-    
-    /* create data folder */
-    if(![fileManager fileExistsAtPath:dataPath]){
-        [fileManager createDirectoryAtPath:dataPath withIntermediateDirectories:NO attributes:nil error:nil];
-    }
-    
-    /* copy *.html files to data folder */
-    NSMutableArray *filePathList = [[NSMutableArray alloc] init];
-    NSArray *fileNameList = [[NSArray alloc] initWithObjects:@"a.txt",@"b.txt",@"c.txt",@"d.txt",@"e.txt", nil];
-    for(NSString *fileName in fileNameList){
-        NSString *filePath = [dataPath stringByAppendingPathComponent:fileName];
-        if (![fileManager fileExistsAtPath: filePath]){
-            NSError *error;
-            NSString *bundle = [[NSBundle mainBundle] pathForResource:fileName ofType:nil];
-            [fileManager copyItemAtPath:bundle toPath:filePath error:&error];
-            if(error){
-                NSLog(@"%@",error.description);
-            }else{
-                [filePathList addObject:filePath];
-            }
-        }else{
-            [filePathList addObject:filePath];
-        }
-    }
+    NSArray *filePathList = [HURLPathUtils getAllFiles];
     
     /* generate index file for all *.html files */
     [HURLCluceneHelper indexFileListWithFilePath:filePathList rebuildIndex:YES];

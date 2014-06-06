@@ -23,6 +23,7 @@
 #include "CLucene/config/repl_tchar.h"
 #include "CLucene/util/Misc.h"
 #include "CLucene/util/StringBuffer.h"
+#import "HURLPathUtils.h"
 
 
 using namespace std;
@@ -38,7 +39,7 @@ using namespace lucene::queryParser;
 
 @implementation HURLCluceneHelper
 +(void)indexFileWithFilePath:(NSString *)filePath rebuildIndex:(BOOL)rebuildIndex{
-    NSString *indexPath = [self getIndexPath];
+    NSString *indexPath = [HURLPathUtils getIndexPath];
 	const char *cIndexPath = [indexPath UTF8String];
     
     /* unlock index */
@@ -73,7 +74,7 @@ using namespace lucene::queryParser;
         return;
     }
     
-    NSString *indexPath = [self getIndexPath];
+    NSString *indexPath = [HURLPathUtils getIndexPath];
 	const char *cIndexPath = [indexPath UTF8String];
     
     /* unlock index */
@@ -127,7 +128,7 @@ using namespace lucene::queryParser;
 }
 
 +(NSArray *)search:(NSString *)keyword{
-    NSString *indexPath = [self getIndexPath];
+    NSString *indexPath = [HURLPathUtils getIndexPath];
     
     NSMutableArray *resultList = [[NSMutableArray alloc] init];
     
@@ -180,24 +181,6 @@ using namespace lucene::queryParser;
     }
     
     return resultList;
-}
-+(NSString *)getIndexPath{
-    NSString *docPath = [self getDocumentPath];
-    NSString *indexPath = [docPath stringByAppendingPathComponent:@"index"];
-    if(![[NSFileManager defaultManager] fileExistsAtPath:indexPath]){
-        NSError *error = nil;
-        [[NSFileManager defaultManager] createDirectoryAtPath:indexPath withIntermediateDirectories:NO attributes:nil error:&error];
-        if(error){
-            NSLog(@"Failed to create folder %@: %@",indexPath,error.description);
-        }
-    }
-    return indexPath;
-}
-+(NSString *)getDocumentPath
-{
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *documentsDirectory = [paths objectAtIndex:0];
-    return documentsDirectory;
 }
 +(NSString*)tchar2string:(const TCHAR*) inStr{
     return [[NSString alloc] initWithBytes:inStr length:wcslen(inStr)*sizeof(TCHAR) encoding:NSUTF32LittleEndianStringEncoding];

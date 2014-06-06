@@ -16,6 +16,5 @@
 +(void)indexFileWithFilePath:(NSString *)filePath rebuildIndex:(BOOL)rebuildIndex;
 +(void)indexFileListWithFilePath:(NSArray *)filePathList rebuildIndex:(BOOL)rebuildIndex;
 +(NSArray *)search:(NSString *)keyword;
-+(NSString *)getDocumentPath;
 
 @end

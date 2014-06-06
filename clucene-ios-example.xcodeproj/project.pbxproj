@@ -11,6 +11,12 @@
 		E4AFD694187E54DD0012BCC0 /* HURLContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4AFD693187E54DD0012BCC0 /* HURLContentViewController.m */; };
 		E4AFD696187E7A6F0012BCC0 /* highlight.js in Sources */ = {isa = PBXBuildFile; fileRef = E4AFD695187E7A6F0012BCC0 /* highlight.js */; };
 		E4AFD697187E7B8A0012BCC0 /* highlight.js in Resources */ = {isa = PBXBuildFile; fileRef = E4AFD695187E7A6F0012BCC0 /* highlight.js */; };
+		E4E35A8B1941BBAD00A0DA9C /* libclucene-core-static.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4E35A891941BBAD00A0DA9C /* libclucene-core-static.a */; };
+		E4E35A8C1941BBAD00A0DA9C /* libclucene-shared-static.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4E35A8A1941BBAD00A0DA9C /* libclucene-shared-static.a */; };
+		E4E35A921941BF5800A0DA9C /* HURLModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4E35A911941BF5800A0DA9C /* HURLModalViewController.m */; };
+		E4E35A951941C02700A0DA9C /* HURLUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = E4E35A941941C02700A0DA9C /* HURLUtils.m */; };
+		E4E35A981941C0FD00A0DA9C /* HURLPathUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = E4E35A971941C0FC00A0DA9C /* HURLPathUtils.m */; };
+		E4E35AA11941C54B00A0DA9C /* HURLBuildIndexViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4E35AA01941C54B00A0DA9C /* HURLBuildIndexViewController.m */; };
 		E4EEC674187E3A5900A682D9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4EEC673187E3A5900A682D9 /* Foundation.framework */; };
 		E4EEC676187E3A5900A682D9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4EEC675187E3A5900A682D9 /* CoreGraphics.framework */; };
 		E4EEC678187E3A5900A682D9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4EEC677187E3A5900A682D9 /* UIKit.framework */; };
@@ -25,8 +31,6 @@
 		E4EEC695187E3A5900A682D9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4EEC677187E3A5900A682D9 /* UIKit.framework */; };
 		E4EEC69D187E3A5900A682D9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E4EEC69B187E3A5900A682D9 /* InfoPlist.strings */; };
 		E4EEC69F187E3A5900A682D9 /* clucene_ios_exampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E4EEC69E187E3A5900A682D9 /* clucene_ios_exampleTests.m */; };
-		E4EEC727187E3A9700A682D9 /* libclucene-core-static.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4EEC725187E3A9700A682D9 /* libclucene-core-static.a */; };
-		E4EEC728187E3A9700A682D9 /* libclucene-shared-static.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4EEC726187E3A9700A682D9 /* libclucene-shared-static.a */; };
 		E4EEC72E187E3AD800A682D9 /* a.txt in Resources */ = {isa = PBXBuildFile; fileRef = E4EEC729187E3AD800A682D9 /* a.txt */; };
 		E4EEC72F187E3AD800A682D9 /* b.txt in Resources */ = {isa = PBXBuildFile; fileRef = E4EEC72A187E3AD800A682D9 /* b.txt */; };
 		E4EEC730187E3AD800A682D9 /* c.txt in Resources */ = {isa = PBXBuildFile; fileRef = E4EEC72B187E3AD800A682D9 /* c.txt */; };
@@ -50,7 +54,17 @@
 		E40E313A187EA78500244639 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		E4AFD692187E54DD0012BCC0 /* HURLContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HURLContentViewController.h; sourceTree = "<group>"; };
 		E4AFD693187E54DD0012BCC0 /* HURLContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HURLContentViewController.m; sourceTree = "<group>"; };
-		E4AFD695187E7A6F0012BCC0 /* highlight.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = highlight.js; sourceTree = "<group>"; };
+		E4AFD695187E7A6F0012BCC0 /* highlight.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = highlight.js; path = ../highlight.js; sourceTree = "<group>"; };
+		E4E35A891941BBAD00A0DA9C /* libclucene-core-static.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libclucene-core-static.a"; sourceTree = "<group>"; };
+		E4E35A8A1941BBAD00A0DA9C /* libclucene-shared-static.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libclucene-shared-static.a"; sourceTree = "<group>"; };
+		E4E35A901941BF5800A0DA9C /* HURLModalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HURLModalViewController.h; path = ../HURLModalViewController.h; sourceTree = "<group>"; };
+		E4E35A911941BF5800A0DA9C /* HURLModalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HURLModalViewController.m; path = ../HURLModalViewController.m; sourceTree = "<group>"; };
+		E4E35A931941C02700A0DA9C /* HURLUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HURLUtils.h; path = ../Clucene/HURLUtils.h; sourceTree = "<group>"; };
+		E4E35A941941C02700A0DA9C /* HURLUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HURLUtils.m; path = ../Clucene/HURLUtils.m; sourceTree = "<group>"; };
+		E4E35A961941C0FC00A0DA9C /* HURLPathUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HURLPathUtils.h; path = ../HURLPathUtils.h; sourceTree = "<group>"; };
+		E4E35A971941C0FC00A0DA9C /* HURLPathUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HURLPathUtils.m; path = ../HURLPathUtils.m; sourceTree = "<group>"; };
+		E4E35A9F1941C54B00A0DA9C /* HURLBuildIndexViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HURLBuildIndexViewController.h; sourceTree = "<group>"; };
+		E4E35AA01941C54B00A0DA9C /* HURLBuildIndexViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HURLBuildIndexViewController.m; sourceTree = "<group>"; };
 		E4EEC670187E3A5900A682D9 /* clucene-ios-example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "clucene-ios-example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4EEC673187E3A5900A682D9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E4EEC675187E3A5900A682D9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -177,13 +191,11 @@
 		E4EEC722187E3A9700A682D9 /* dirent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dirent.h; sourceTree = "<group>"; };
 		E4EEC723187E3A9700A682D9 /* Misc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Misc.h; sourceTree = "<group>"; };
 		E4EEC724187E3A9700A682D9 /* StringBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringBuffer.h; sourceTree = "<group>"; };
-		E4EEC725187E3A9700A682D9 /* libclucene-core-static.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libclucene-core-static.a"; sourceTree = "<group>"; };
-		E4EEC726187E3A9700A682D9 /* libclucene-shared-static.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libclucene-shared-static.a"; sourceTree = "<group>"; };
-		E4EEC729187E3AD800A682D9 /* a.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = a.txt; sourceTree = "<group>"; };
-		E4EEC72A187E3AD800A682D9 /* b.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = b.txt; sourceTree = "<group>"; };
-		E4EEC72B187E3AD800A682D9 /* c.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = c.txt; sourceTree = "<group>"; };
-		E4EEC72C187E3AD800A682D9 /* d.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = d.txt; sourceTree = "<group>"; };
-		E4EEC72D187E3AD800A682D9 /* e.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = e.txt; sourceTree = "<group>"; };
+		E4EEC729187E3AD800A682D9 /* a.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = a.txt; path = ../a.txt; sourceTree = "<group>"; };
+		E4EEC72A187E3AD800A682D9 /* b.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = b.txt; path = ../b.txt; sourceTree = "<group>"; };
+		E4EEC72B187E3AD800A682D9 /* c.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = c.txt; path = ../c.txt; sourceTree = "<group>"; };
+		E4EEC72C187E3AD800A682D9 /* d.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = d.txt; path = ../d.txt; sourceTree = "<group>"; };
+		E4EEC72D187E3AD800A682D9 /* e.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = e.txt; path = ../e.txt; sourceTree = "<group>"; };
 		E4EEC733187E3B0700A682D9 /* HURLCluceneHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HURLCluceneHelper.h; sourceTree = "<group>"; };
 		E4EEC734187E3B0700A682D9 /* HURLCluceneHelper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HURLCluceneHelper.mm; sourceTree = "<group>"; };
 		E4EEC736187E3CA500A682D9 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
@@ -194,9 +206,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4E35A8B1941BBAD00A0DA9C /* libclucene-core-static.a in Frameworks */,
 				E4EEC737187E3CA500A682D9 /* libz.dylib in Frameworks */,
-				E4EEC727187E3A9700A682D9 /* libclucene-core-static.a in Frameworks */,
-				E4EEC728187E3A9700A682D9 /* libclucene-shared-static.a in Frameworks */,
+				E4E35A8C1941BBAD00A0DA9C /* libclucene-shared-static.a in Frameworks */,
 				E4EEC676187E3A5900A682D9 /* CoreGraphics.framework in Frameworks */,
 				E4EEC678187E3A5900A682D9 /* UIKit.framework in Frameworks */,
 				E4EEC674187E3A5900A682D9 /* Foundation.framework in Frameworks */,
@@ -216,6 +228,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E4E35A991941C2FD00A0DA9C /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				E4E35A901941BF5800A0DA9C /* HURLModalViewController.h */,
+				E4E35A911941BF5800A0DA9C /* HURLModalViewController.m */,
+				E4E35A931941C02700A0DA9C /* HURLUtils.h */,
+				E4E35A941941C02700A0DA9C /* HURLUtils.m */,
+				E4E35A961941C0FC00A0DA9C /* HURLPathUtils.h */,
+				E4E35A971941C0FC00A0DA9C /* HURLPathUtils.m */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		E4E35A9A1941C33900A0DA9C /* Files */ = {
+			isa = PBXGroup;
+			children = (
+				E4EEC729187E3AD800A682D9 /* a.txt */,
+				E4EEC72A187E3AD800A682D9 /* b.txt */,
+				E4EEC72B187E3AD800A682D9 /* c.txt */,
+				E4EEC72C187E3AD800A682D9 /* d.txt */,
+				E4EEC72D187E3AD800A682D9 /* e.txt */,
+			);
+			path = Files;
+			sourceTree = "<group>";
+		};
+		E4E35A9B1941C35800A0DA9C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E4AFD695187E7A6F0012BCC0 /* highlight.js */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		E4EEC667187E3A5900A682D9 = {
 			isa = PBXGroup;
 			children = (
@@ -251,24 +296,21 @@
 		E4EEC679187E3A5900A682D9 /* clucene-ios-example */ = {
 			isa = PBXGroup;
 			children = (
-				E4AFD695187E7A6F0012BCC0 /* highlight.js */,
+				E4EEC6A8187E3A9700A682D9 /* Clucene */,
+				E4E35A9B1941C35800A0DA9C /* Resources */,
+				E4E35A9A1941C33900A0DA9C /* Files */,
+				E4E35A991941C2FD00A0DA9C /* Utils */,
 				E4EEC733187E3B0700A682D9 /* HURLCluceneHelper.h */,
 				E4EEC734187E3B0700A682D9 /* HURLCluceneHelper.mm */,
-				E4EEC729187E3AD800A682D9 /* a.txt */,
-				E4EEC72A187E3AD800A682D9 /* b.txt */,
-				E4EEC72B187E3AD800A682D9 /* c.txt */,
-				E4EEC72C187E3AD800A682D9 /* d.txt */,
-				E4EEC72D187E3AD800A682D9 /* e.txt */,
-				E4EEC6A8187E3A9700A682D9 /* Clucene */,
-				E4EEC682187E3A5900A682D9 /* HURLAppDelegate.h */,
-				E4EEC683187E3A5900A682D9 /* HURLAppDelegate.m */,
-				E4EEC685187E3A5900A682D9 /* Main.storyboard */,
 				E4EEC688187E3A5900A682D9 /* HURLViewController.h */,
 				E4EEC689187E3A5900A682D9 /* HURLViewController.m */,
-				E4EEC68B187E3A5900A682D9 /* Images.xcassets */,
-				E4EEC67A187E3A5900A682D9 /* Supporting Files */,
 				E4AFD692187E54DD0012BCC0 /* HURLContentViewController.h */,
 				E4AFD693187E54DD0012BCC0 /* HURLContentViewController.m */,
+				E4E35A9F1941C54B00A0DA9C /* HURLBuildIndexViewController.h */,
+				E4E35AA01941C54B00A0DA9C /* HURLBuildIndexViewController.m */,
+				E4EEC685187E3A5900A682D9 /* Main.storyboard */,
+				E4EEC68B187E3A5900A682D9 /* Images.xcassets */,
+				E4EEC67A187E3A5900A682D9 /* Supporting Files */,
 			);
 			path = "clucene-ios-example";
 			sourceTree = "<group>";
@@ -276,6 +318,8 @@
 		E4EEC67A187E3A5900A682D9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E4EEC682187E3A5900A682D9 /* HURLAppDelegate.h */,
+				E4EEC683187E3A5900A682D9 /* HURLAppDelegate.m */,
 				E4EEC67B187E3A5900A682D9 /* clucene-ios-example-Info.plist */,
 				E4EEC67C187E3A5900A682D9 /* InfoPlist.strings */,
 				E4EEC67F187E3A5900A682D9 /* main.m */,
@@ -305,9 +349,9 @@
 		E4EEC6A8187E3A9700A682D9 /* Clucene */ = {
 			isa = PBXGroup;
 			children = (
+				E4E35A891941BBAD00A0DA9C /* libclucene-core-static.a */,
+				E4E35A8A1941BBAD00A0DA9C /* libclucene-shared-static.a */,
 				E4EEC6A9187E3A9700A682D9 /* include */,
-				E4EEC725187E3A9700A682D9 /* libclucene-core-static.a */,
-				E4EEC726187E3A9700A682D9 /* libclucene-shared-static.a */,
 			);
 			path = Clucene;
 			sourceTree = "<group>";
@@ -660,11 +704,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4AFD694187E54DD0012BCC0 /* HURLContentViewController.m in Sources */,
+				E4E35AA11941C54B00A0DA9C /* HURLBuildIndexViewController.m in Sources */,
 				E4EEC68A187E3A5900A682D9 /* HURLViewController.m in Sources */,
+				E4E35A921941BF5800A0DA9C /* HURLModalViewController.m in Sources */,
 				E4EEC680187E3A5900A682D9 /* main.m in Sources */,
+				E4E35A981941C0FD00A0DA9C /* HURLPathUtils.m in Sources */,
 				E4AFD696187E7A6F0012BCC0 /* highlight.js in Sources */,
 				E4EEC735187E3B0700A682D9 /* HURLCluceneHelper.mm in Sources */,
 				E4EEC684187E3A5900A682D9 /* HURLAppDelegate.m in Sources */,
+				E4E35A951941C02700A0DA9C /* HURLUtils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -815,6 +863,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/Ron/Documents/xcode/clucene-ios-example/clucene-ios-example/Clucene",
+					"$(PROJECT_DIR)/clucene-ios-example/Clucene",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -836,6 +885,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/Ron/Documents/xcode/clucene-ios-example/clucene-ios-example/Clucene",
+					"$(PROJECT_DIR)/clucene-ios-example/Clucene",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
