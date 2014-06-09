@@ -101,6 +101,11 @@ using namespace lucene::queryParser;
     NSString *content = [[NSString alloc] initWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
     const TCHAR* strbuffer = [self string2char:content];
     doc->add( *_CLNEW Field(_T("contents"), strbuffer, Field::STORE_YES | Field::INDEX_TOKENIZED) );
+    
+    NSString *contents = [NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
+    NSString *summary = [contents substringToIndex:200];
+    const TCHAR* cSummary = [self string2char:summary];
+    doc->add( *_CLNEW Field(_T("summary"), cSummary, Field::STORE_YES | Field::INDEX_TOKENIZED) );
 }
 
 +(NSArray *)searchFile:(NSString *)filePath withSearchKey:(NSString *)keyword{
@@ -139,6 +144,10 @@ using namespace lucene::queryParser;
             const TCHAR* cFileName = doc->get(_T("fileName"));
             NSString *fileName = [self tchar2string:cFileName];
             resultItem.fileName = fileName;
+            
+            const TCHAR* cSummary = doc->get(_T("summary"));
+            NSString *summary = [self tchar2string:cSummary];
+            resultItem.summary = summary;
             
             resultItem.searchKeyword = keyword;
             

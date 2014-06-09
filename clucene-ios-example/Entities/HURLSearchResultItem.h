@@ -12,6 +12,7 @@
 
 @property(strong,nonatomic) NSString *filePath;
 @property(strong,nonatomic) NSString *fileName;
+@property(strong,nonatomic) NSString *summary;
 @property(strong,nonatomic) NSString *searchKeyword;
 
 @end

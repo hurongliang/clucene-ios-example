@@ -28,6 +28,7 @@
 {
     [super viewDidLoad];
     self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
+    [self.searchBar becomeFirstResponder];
 }
 
 - (void)didReceiveMemoryWarning
@@ -35,16 +36,16 @@
     [super didReceiveMemoryWarning];
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    HURLSearchResultItem *resultItem = [resultList objectAtIndex:indexPath.row];
-    NSString *path = resultItem.filePath;
-    NSString *fileName = resultItem.fileName;
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
     if(cell==nil){
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"cell"];
     }
-    NSLog(@"path = %@",path);
-    NSLog(@"fileName = %@",fileName);
-    cell.textLabel.text = fileName;
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    
+    HURLSearchResultItem *resultItem = [resultList objectAtIndex:indexPath.row];
+    NSLog(@"%@",resultItem.filePath);
+    cell.textLabel.text = resultItem.fileName;
+    cell.detailTextLabel.text = resultItem.summary;
     return cell;
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -73,7 +74,7 @@
 -(void)doSearch:(NSString *)searchText{
     if([searchText length]>=2){
         resultList = [HURLCluceneHelper searchFileList:[HURLPathUtils getAllFiles] withKeyword:searchText];
-        NSLog(@"Search result count %ld",(unsigned long)resultList.count);
+        NSLog(@"Found %ld matched files.",(unsigned long)resultList.count);
         [self.tableView reloadData];
     }
 }
