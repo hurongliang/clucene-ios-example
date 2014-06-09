@@ -47,7 +47,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Search" id="Uuz-dO-bcH">
-                        <barButtonItem key="rightBarButtonItem" title="Build Index" id="t1P-26-qb5">
+                        <barButtonItem key="rightBarButtonItem" title="Index" id="t1P-26-qb5">
                             <connections>
                                 <action selector="buildIndex:" destination="BYZ-38-t0r" id="3bi-Dx-s2t"/>
                                 <segue destination="E6i-W8-zrt" kind="modal" identifier="showBuildIndexDialog" modalPresentationStyle="formSheet" id="Sze-a5-o0g"/>
@@ -76,8 +76,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="540" height="620"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="ZGx-2e-PkJ" userLabel="files">
-                                <rect key="frame" x="0.0" y="0.0" width="540" height="526"/>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tWZ-ii-306">
+                                <rect key="frame" x="0.0" y="0.0" width="540" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Index Files" id="6fV-kb-yNF">
+                                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="DnO-r6-KZI">
+                                            <connections>
+                                                <action selector="doneButtonClicked:" destination="E6i-W8-zrt" id="MJS-ms-VNC"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="ZGx-2e-PkJ" userLabel="fileTableView">
+                                <rect key="frame" x="0.0" y="44" width="540" height="482"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
@@ -103,8 +116,8 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="fon-GA-moP"/>
                                 </constraints>
-                                <state key="normal" title="Build">
-                                    <color key="titleColor" red="0.13538650082055392" green="0.27605018311824892" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Index">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -114,14 +127,17 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="tWZ-ii-306" secondAttribute="trailing" id="0jG-fm-F7q"/>
                             <constraint firstAttribute="centerX" secondItem="oT6-6D-Jlh" secondAttribute="centerX" id="Mfd-6b-b8a"/>
                             <constraint firstItem="I3a-xy-Y0A" firstAttribute="top" secondItem="oT6-6D-Jlh" secondAttribute="bottom" constant="20" id="TOk-i4-cXm"/>
+                            <constraint firstItem="ZGx-2e-PkJ" firstAttribute="top" secondItem="tWZ-ii-306" secondAttribute="bottom" constant="8" symbolic="YES" id="TdY-79-He1"/>
                             <constraint firstAttribute="trailing" secondItem="ZGx-2e-PkJ" secondAttribute="trailing" id="Yys-tb-rB7"/>
+                            <constraint firstItem="tWZ-ii-306" firstAttribute="top" secondItem="RI6-Jl-ZA0" secondAttribute="bottom" constant="20" symbolic="YES" id="dGJ-kn-SAn"/>
                             <constraint firstItem="ZGx-2e-PkJ" firstAttribute="leading" secondItem="iQv-Ec-A7L" secondAttribute="leading" id="fD1-pE-ezU"/>
                             <constraint firstItem="Mst-qP-meu" firstAttribute="top" secondItem="ZGx-2e-PkJ" secondAttribute="bottom" constant="20" id="jmq-ly-qfs"/>
                             <constraint firstAttribute="trailing" secondItem="Mst-qP-meu" secondAttribute="trailing" constant="20" symbolic="YES" id="qSv-Ld-Qqe"/>
                             <constraint firstItem="Mst-qP-meu" firstAttribute="leading" secondItem="iQv-Ec-A7L" secondAttribute="leading" constant="20" symbolic="YES" id="rTO-8n-iH8"/>
-                            <constraint firstItem="ZGx-2e-PkJ" firstAttribute="top" secondItem="RI6-Jl-ZA0" secondAttribute="bottom" id="trm-Gb-KF1"/>
+                            <constraint firstItem="tWZ-ii-306" firstAttribute="leading" secondItem="iQv-Ec-A7L" secondAttribute="leading" id="wq7-0E-rZU"/>
                             <constraint firstItem="oT6-6D-Jlh" firstAttribute="top" secondItem="Mst-qP-meu" secondAttribute="bottom" constant="20" id="xgU-NO-ZeG"/>
                         </constraints>
                     </view>

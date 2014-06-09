@@ -18,6 +18,7 @@
 - (IBAction)buildButtonClicked:(UIButton *)sender;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *indicator;
 @property (weak, nonatomic) IBOutlet UILabel *messageLabel;
+- (IBAction)doneButtonClicked:(id)sender;
 
 @end
 
@@ -87,5 +88,8 @@
     }
     cell.textLabel.text = [filePath lastPathComponent];
     return cell;
+}
+- (IBAction)doneButtonClicked:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 @end
