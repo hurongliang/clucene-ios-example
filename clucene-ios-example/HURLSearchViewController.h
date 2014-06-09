@@ -1,5 +1,5 @@
 //
-//  HURLViewController.h
+//  HURLSearchViewController.h
 //  clucene-ios-example
 //
 //  Created by Ron Hu on 1/9/14.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HURLViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,UISearchBarDelegate>
+@interface HURLSearchViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,UISearchBarDelegate>
 
 @end

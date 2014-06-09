@@ -25,7 +25,7 @@
 		E4EEC680187E3A5900A682D9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E4EEC67F187E3A5900A682D9 /* main.m */; };
 		E4EEC684187E3A5900A682D9 /* HURLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E4EEC683187E3A5900A682D9 /* HURLAppDelegate.m */; };
 		E4EEC687187E3A5900A682D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4EEC685187E3A5900A682D9 /* Main.storyboard */; };
-		E4EEC68A187E3A5900A682D9 /* HURLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4EEC689187E3A5900A682D9 /* HURLViewController.m */; };
+		E4EEC68A187E3A5900A682D9 /* HURLSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4EEC689187E3A5900A682D9 /* HURLSearchViewController.m */; };
 		E4EEC68C187E3A5900A682D9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4EEC68B187E3A5900A682D9 /* Images.xcassets */; };
 		E4EEC693187E3A5900A682D9 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4EEC692187E3A5900A682D9 /* XCTest.framework */; };
 		E4EEC694187E3A5900A682D9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4EEC673187E3A5900A682D9 /* Foundation.framework */; };
@@ -79,8 +79,8 @@
 		E4EEC682187E3A5900A682D9 /* HURLAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HURLAppDelegate.h; sourceTree = "<group>"; };
 		E4EEC683187E3A5900A682D9 /* HURLAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HURLAppDelegate.m; sourceTree = "<group>"; };
 		E4EEC686187E3A5900A682D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		E4EEC688187E3A5900A682D9 /* HURLViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HURLViewController.h; sourceTree = "<group>"; };
-		E4EEC689187E3A5900A682D9 /* HURLViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HURLViewController.m; sourceTree = "<group>"; };
+		E4EEC688187E3A5900A682D9 /* HURLSearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HURLSearchViewController.h; sourceTree = "<group>"; };
+		E4EEC689187E3A5900A682D9 /* HURLSearchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HURLSearchViewController.m; sourceTree = "<group>"; };
 		E4EEC68B187E3A5900A682D9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		E4EEC691187E3A5900A682D9 /* clucene-ios-exampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "clucene-ios-exampleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4EEC692187E3A5900A682D9 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -315,8 +315,8 @@
 				E4E35A9B1941C35800A0DA9C /* Resources */,
 				E4E35A9A1941C33900A0DA9C /* Files */,
 				E4E35A991941C2FD00A0DA9C /* Utils */,
-				E4EEC688187E3A5900A682D9 /* HURLViewController.h */,
-				E4EEC689187E3A5900A682D9 /* HURLViewController.m */,
+				E4EEC688187E3A5900A682D9 /* HURLSearchViewController.h */,
+				E4EEC689187E3A5900A682D9 /* HURLSearchViewController.m */,
 				E4AFD692187E54DD0012BCC0 /* HURLContentViewController.h */,
 				E4AFD693187E54DD0012BCC0 /* HURLContentViewController.m */,
 				E4E35A9F1941C54B00A0DA9C /* HURLBuildIndexViewController.h */,
@@ -718,7 +718,7 @@
 			files = (
 				E4AFD694187E54DD0012BCC0 /* HURLContentViewController.m in Sources */,
 				E4E35AA11941C54B00A0DA9C /* HURLBuildIndexViewController.m in Sources */,
-				E4EEC68A187E3A5900A682D9 /* HURLViewController.m in Sources */,
+				E4EEC68A187E3A5900A682D9 /* HURLSearchViewController.m in Sources */,
 				E4E35A921941BF5800A0DA9C /* HURLModalViewController.m in Sources */,
 				E4EEC680187E3A5900A682D9 /* main.m in Sources */,
 				E4E35A981941C0FD00A0DA9C /* HURLPathUtils.m in Sources */,

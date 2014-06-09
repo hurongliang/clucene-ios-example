@@ -1,25 +1,25 @@
 //
-//  HURLViewController.m
+//  HURLSearchViewController.m
 //  ios-clucene-sample
 //
 //  Created by Ron Hu on 1/6/14.
 //  Copyright (c) 2014 hurongliang.com. All rights reserved.
 //
 
-#import "HURLViewController.h"
+#import "HURLSearchViewController.h"
 #import "HURLCluceneHelper.h"
 #import "HURLContentViewController.h"
 #import "HURLPathUtils.h"
 #import "HURLSearchResultItem.h"
 
-@interface HURLViewController ()
+@interface HURLSearchViewController ()
 @property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 - (IBAction)buildIndex:(UIBarButtonItem *)sender;
 
 @end
 
-@implementation HURLViewController{
+@implementation HURLSearchViewController{
     NSArray *resultList;
     HURLSearchResultItem *selectedSearchItem;
 }
@@ -64,6 +64,11 @@
 
 -(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar{
     [self doSearch:searchBar.text];
+}
+-(void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText{
+    if(searchText.length>=2){
+        [self doSearch:searchText];
+    }
 }
 -(void)doSearch:(NSString *)searchText{
     if([searchText length]>=2){
