@@ -50,7 +50,7 @@
                         <barButtonItem key="rightBarButtonItem" title="Build Index" id="t1P-26-qb5">
                             <connections>
                                 <action selector="buildIndex:" destination="BYZ-38-t0r" id="3bi-Dx-s2t"/>
-                                <segue destination="E6i-W8-zrt" kind="modal" identifier="showBuildIndexDialog" id="Sze-a5-o0g"/>
+                                <segue destination="E6i-W8-zrt" kind="modal" identifier="showBuildIndexDialog" modalPresentationStyle="formSheet" id="Sze-a5-o0g"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -73,21 +73,38 @@
                         <viewControllerLayoutGuide type="bottom" id="I3a-xy-Y0A"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="iQv-Ec-A7L">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="540" height="620"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="ZGx-2e-PkJ" userLabel="files">
-                                <rect key="frame" x="0.0" y="20" width="768" height="930"/>
+                                <rect key="frame" x="0.0" y="0.0" width="540" height="526"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="E6i-W8-zrt" id="1nK-qH-2SO"/>
+                                    <outlet property="delegate" destination="E6i-W8-zrt" id="KTV-vu-llQ"/>
+                                </connections>
                             </tableView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Qw7-rE-VZh" userLabel="indicator">
+                                <rect key="frame" x="212" y="573" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="color" red="0.1353865008" green="0.27605018310000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mst-qP-meu" userLabel="message">
+                                <rect key="frame" x="20" y="546" width="500" height="0.0"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oT6-6D-Jlh" userLabel="buildButton">
-                                <rect key="frame" x="354" y="970" width="60" height="34"/>
+                                <rect key="frame" x="240" y="566" width="60" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="fon-GA-moP"/>
                                 </constraints>
                                 <state key="normal" title="Build">
+                                    <color key="titleColor" red="0.13538650082055392" green="0.27605018311824892" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -101,14 +118,18 @@
                             <constraint firstItem="I3a-xy-Y0A" firstAttribute="top" secondItem="oT6-6D-Jlh" secondAttribute="bottom" constant="20" id="TOk-i4-cXm"/>
                             <constraint firstAttribute="trailing" secondItem="ZGx-2e-PkJ" secondAttribute="trailing" id="Yys-tb-rB7"/>
                             <constraint firstItem="ZGx-2e-PkJ" firstAttribute="leading" secondItem="iQv-Ec-A7L" secondAttribute="leading" id="fD1-pE-ezU"/>
-                            <constraint firstItem="oT6-6D-Jlh" firstAttribute="top" secondItem="ZGx-2e-PkJ" secondAttribute="bottom" constant="20" id="pli-Rw-1GV"/>
+                            <constraint firstItem="Mst-qP-meu" firstAttribute="top" secondItem="ZGx-2e-PkJ" secondAttribute="bottom" constant="20" id="jmq-ly-qfs"/>
+                            <constraint firstAttribute="trailing" secondItem="Mst-qP-meu" secondAttribute="trailing" constant="20" symbolic="YES" id="qSv-Ld-Qqe"/>
+                            <constraint firstItem="Mst-qP-meu" firstAttribute="leading" secondItem="iQv-Ec-A7L" secondAttribute="leading" constant="20" symbolic="YES" id="rTO-8n-iH8"/>
                             <constraint firstItem="ZGx-2e-PkJ" firstAttribute="top" secondItem="RI6-Jl-ZA0" secondAttribute="bottom" id="trm-Gb-KF1"/>
+                            <constraint firstItem="oT6-6D-Jlh" firstAttribute="top" secondItem="Mst-qP-meu" secondAttribute="bottom" constant="20" id="xgU-NO-ZeG"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="buildButton" destination="oT6-6D-Jlh" id="gLE-Nr-AC0"/>
                         <outlet property="fileTableView" destination="ZGx-2e-PkJ" id="8Tl-vi-Zne"/>
-                        <outlet property="filesTableView" destination="ZGx-2e-PkJ" id="hde-qP-xHD"/>
+                        <outlet property="indicator" destination="Qw7-rE-VZh" id="nHl-5i-VG8"/>
+                        <outlet property="messageLabel" destination="Mst-qP-meu" id="cO2-Fx-ake"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bF4-xA-qYp" userLabel="First Responder" sceneMemberID="firstResponder"/>

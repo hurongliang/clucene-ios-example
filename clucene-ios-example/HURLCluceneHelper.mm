@@ -24,6 +24,7 @@
 #include "CLucene/util/Misc.h"
 #include "CLucene/util/StringBuffer.h"
 #import "HURLPathUtils.h"
+#import "HURLSearchResultItem.h"
 
 
 using namespace std;
@@ -38,8 +39,18 @@ using namespace lucene::queryParser;
 #import "HURLCluceneHelper.h"
 
 @implementation HURLCluceneHelper
-+(void)indexFileWithFilePath:(NSString *)filePath rebuildIndex:(BOOL)rebuildIndex{
-    NSString *indexPath = [HURLPathUtils getIndexPath];
++(NSString *)indexPathForFile:(NSString *)filePath{
+    if(filePath==nil || filePath.length==0){
+        return nil;
+    }
+    
+    NSString *fileName = [[filePath lastPathComponent] stringByDeletingPathExtension];
+    
+    return [[HURLPathUtils getIndexPath] stringByAppendingPathComponent:fileName];
+}
+
++(void)indexFile:(NSString *)filePath rebuildIndex:(BOOL)rebuildIndex{
+    NSString *indexPath = [self indexPathForFile:filePath];
 	const char *cIndexPath = [indexPath UTF8String];
     
     /* unlock index */
@@ -69,49 +80,14 @@ using namespace lucene::queryParser;
     NSLog(@"%@ indexed.",filePath);
 }
 
-+(void)indexFileListWithFilePath:(NSArray *)filePathList rebuildIndex:(BOOL)rebuildIndex{
++(void)indexFileList:(NSArray *)filePathList rebuildIndex:(BOOL)rebuildIndex{
     if(filePathList==nil && [filePathList count]==0){
         return;
     }
     
-    NSString *indexPath = [HURLPathUtils getIndexPath];
-	const char *cIndexPath = [indexPath UTF8String];
-    
-    /* unlock index */
-    IndexWriter* writer = nil;
-	lucene::analysis::WhitespaceAnalyzer an;
-    if(rebuildIndex){
-        if([[NSFileManager defaultManager] fileExistsAtPath:indexPath]){
-            [[NSFileManager defaultManager] removeItemAtPath:indexPath error:nil];
-        }
-        writer = _CLNEW IndexWriter(cIndexPath, &an, true);
-    }else{
-        if (IndexReader::indexExists(cIndexPath)){
-            if(IndexReader::isLocked(cIndexPath)){
-                IndexReader::unlock(cIndexPath);
-            }
-        }
-        writer = _CLNEW IndexWriter(cIndexPath, &an, false);
-    }
-    
-    writer->setMaxFieldLength(0x7FFFFFFFL);
-    
-    writer->setUseCompoundFile(false);
-    
-    Document doc;
     for (NSString *filePath in filePathList) {
-        doc.clear();
-        [self createDocument:filePath document:&doc];
-        writer->addDocument( &doc);
-        NSLog(@"%@ indexed.",filePath);
+        [self indexFile:filePath rebuildIndex:rebuildIndex];
     }
-	
-    writer->setUseCompoundFile(true);
-    writer->optimize();
-	
-    writer->close();
-	_CLLDELETE(writer);
-    
 }
 +(void)createDocument:(NSString*)filePath document:(Document*) doc{
     const TCHAR* cFilePath = [self string2char:filePath];
@@ -127,14 +103,14 @@ using namespace lucene::queryParser;
     doc->add( *_CLNEW Field(_T("contents"), strbuffer, Field::STORE_YES | Field::INDEX_TOKENIZED) );
 }
 
-+(NSArray *)search:(NSString *)keyword{
-    NSString *indexPath = [HURLPathUtils getIndexPath];
-    
-    NSMutableArray *resultList = [[NSMutableArray alloc] init];
-    
++(NSArray *)searchFile:(NSString *)filePath withSearchKey:(NSString *)keyword{
+    NSString *indexPath = [self indexPathForFile:filePath];
     if(keyword==nil || keyword.length==0 || indexPath==nil || ![[NSFileManager defaultManager] fileExistsAtPath:indexPath]){
         return nil;
     }
+    
+    NSMutableArray *resultList = [[NSMutableArray alloc] init];
+    
     try{
         const char* cIndexPath = [indexPath UTF8String];
         
@@ -155,17 +131,18 @@ using namespace lucene::queryParser;
         int hLength = h->length();
         for ( size_t i=0;i<hLength;i++ ){
             Document* doc = &h->doc(i);
-            NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
-            
+            HURLSearchResultItem *resultItem = [[HURLSearchResultItem alloc] init];
             const TCHAR* cFilePath = doc->get(_T("path"));
             NSString *filePath = [self tchar2string:cFilePath];
-            [dict setObject:filePath forKey:@"path"];
+            resultItem.filePath = filePath;
             
             const TCHAR* cFileName = doc->get(_T("fileName"));
             NSString *fileName = [self tchar2string:cFileName];
-            [dict setObject:fileName forKey:@"fileName"];
+            resultItem.fileName = fileName;
             
-            [resultList addObject:dict];
+            resultItem.searchKeyword = keyword;
+            
+            [resultList addObject:resultItem];
         }
         
         _CLLDELETE(h);
@@ -182,6 +159,19 @@ using namespace lucene::queryParser;
     
     return resultList;
 }
++(NSArray *)searchFileList:(NSArray *)fileList withKeyword:(NSString *)keyword{
+    NSMutableArray *resultList = [[NSMutableArray alloc] init];
+    if(fileList!=nil && fileList.count>0){
+        for(NSString *filePath in fileList){
+            NSArray *list = [self searchFile:filePath withSearchKey:keyword];
+            if(list!=nil && list.count>0){
+                [resultList addObjectsFromArray:list];
+            }
+        }
+    }
+    
+    return resultList;
+}
 +(NSString*)tchar2string:(const TCHAR*) inStr{
     return [[NSString alloc] initWithBytes:inStr length:wcslen(inStr)*sizeof(TCHAR) encoding:NSUTF32LittleEndianStringEncoding];
     
@@ -189,13 +179,4 @@ using namespace lucene::queryParser;
 +(const TCHAR*)string2char:(NSString *)str{
     return (const TCHAR*)[str cStringUsingEncoding:NSUTF32LittleEndianStringEncoding];
 }
-/*
-+(const char*)wchar2char(const TCHAR* wchar){
-    std::wstring_convert<std::codecvt_utf8<wchar_t>,wchar_t> convert;
-    
-    wchar_t const *ws = L"Steve Nash";
-    std::string s = convert.to_bytes(ws);
-    char const *cs = s.c_str();
-}
- */
 @end

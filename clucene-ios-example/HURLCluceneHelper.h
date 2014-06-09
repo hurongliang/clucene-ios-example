@@ -13,8 +13,8 @@
 
 @interface HURLCluceneHelper : NSObject
 
-+(void)indexFileWithFilePath:(NSString *)filePath rebuildIndex:(BOOL)rebuildIndex;
-+(void)indexFileListWithFilePath:(NSArray *)filePathList rebuildIndex:(BOOL)rebuildIndex;
-+(NSArray *)search:(NSString *)keyword;
-
++(void)indexFile:(NSString *)filePath rebuildIndex:(BOOL)rebuildIndex;
++(void)indexFileList:(NSArray *)filePathList rebuildIndex:(BOOL)rebuildIndex;
++(NSArray *)searchFile:(NSString *)filePath withSearchKey:(NSString *)keyword;
++(NSArray *)searchFileList:(NSArray *)fileList withKeyword:(NSString *)keyword;
 @end

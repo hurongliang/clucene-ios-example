@@ -8,6 +8,7 @@
 
 #import "HURLBuildIndexViewController.h"
 #import "HURLPathUtils.h"
+#import "HURLCluceneHelper.h"
 
 @interface HURLBuildIndexViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *fileTableView;
@@ -15,6 +16,8 @@
 
 @property(strong,nonatomic)NSArray *fileList;
 - (IBAction)buildButtonClicked:(UIButton *)sender;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *indicator;
+@property (weak, nonatomic) IBOutlet UILabel *messageLabel;
 
 @end
 
@@ -33,6 +36,9 @@
 {
     [super viewDidLoad];
     self.fileList = [HURLPathUtils getAllFiles];
+    self.fileTableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
+    [self.buildButton.layer setBorderColor:[UIColor blueColor].CGColor];
+    [self.buildButton.layer setBorderWidth:2.0f];
 }
 
 - (void)didReceiveMemoryWarning
@@ -53,6 +59,15 @@
 */
 
 - (IBAction)buildButtonClicked:(UIButton *)sender {
+    [self.indicator startAnimating];
+    self.messageLabel.text = @"Buiding index ...";
+    for(int index=0;index<self.fileList.count;index++){
+        [HURLCluceneHelper indexFile:[self.fileList objectAtIndex:index] rebuildIndex:YES];
+        UITableViewCell *cell = [self.fileTableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:index inSection:0]];
+        cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    }
+    self.messageLabel.text = @"Index has been builded";
+    [self.indicator stopAnimating];
 }
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return 1;
@@ -65,5 +80,12 @@
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     NSString *filePath = [self.fileList objectAtIndex:indexPath.row];
+    static NSString *cellid = @"cellId";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellid];
+    if(cell==nil){
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellid];
+    }
+    cell.textLabel.text = [filePath lastPathComponent];
+    return cell;
 }
 @end

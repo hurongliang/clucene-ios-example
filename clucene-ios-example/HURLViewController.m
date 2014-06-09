@@ -10,6 +10,7 @@
 #import "HURLCluceneHelper.h"
 #import "HURLContentViewController.h"
 #import "HURLPathUtils.h"
+#import "HURLSearchResultItem.h"
 
 @interface HURLViewController ()
 @property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
@@ -20,8 +21,7 @@
 
 @implementation HURLViewController{
     NSArray *resultList;
-    NSString *showFilePath;
-    NSString *showFileName;
+    HURLSearchResultItem *selectedSearchItem;
 }
 
 - (void)viewDidLoad
@@ -34,9 +34,9 @@
     [super didReceiveMemoryWarning];
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    NSDictionary *dict = [resultList objectAtIndex:indexPath.row];
-    NSString *path = [dict objectForKey:@"path"];
-    NSString *fileName = [dict objectForKey:@"fileName"];
+    HURLSearchResultItem *resultItem = [resultList objectAtIndex:indexPath.row];
+    NSString *path = resultItem.filePath;
+    NSString *fileName = resultItem.fileName;
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
     if(cell==nil){
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
@@ -56,7 +56,7 @@
     NSArray *filePathList = [HURLPathUtils getAllFiles];
     
     /* generate index file for all *.html files */
-    [HURLCluceneHelper indexFileListWithFilePath:filePathList rebuildIndex:YES];
+    [HURLCluceneHelper indexFileList:filePathList rebuildIndex:YES];
     
     NSLog(@"Build index success!");
 }
@@ -66,24 +66,20 @@
 }
 -(void)doSearch:(NSString *)searchText{
     if([searchText length]>=2){
-        resultList = [HURLCluceneHelper search:searchText];
-        NSLog(@"Search result count %d",resultList.count);
+        resultList = [HURLCluceneHelper searchFileList:[HURLPathUtils getAllFiles] withKeyword:searchText];
+        NSLog(@"Search result count %ld",(unsigned long)resultList.count);
         [self.tableView reloadData];
     }
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    NSDictionary *dict = [resultList objectAtIndex:indexPath.row];
-    showFilePath = [dict objectForKey:@"path"];
-    showFileName = [dict objectForKey:@"fileName"];
+    selectedSearchItem = [resultList objectAtIndex:indexPath.row];
     [self performSegueWithIdentifier:@"showContent" sender:self];
 }
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if([segue.identifier isEqualToString:@"showContent"]){
-        if(showFilePath){
+        if(selectedSearchItem){
             HURLContentViewController *vc = segue.destinationViewController;
-            vc.filePath = showFilePath;
-            vc.fileName = showFileName;
-            vc.searchText = self.searchBar.text;
+            vc.searchResult = selectedSearchItem;
         }
     }
 }

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E40E313B187EA78500244639 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E40E313A187EA78500244639 /* README.md */; };
+		E41ACB761945553E0006FD76 /* HURLSearchResultItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E41ACB751945553E0006FD76 /* HURLSearchResultItem.m */; };
 		E4AFD694187E54DD0012BCC0 /* HURLContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4AFD693187E54DD0012BCC0 /* HURLContentViewController.m */; };
 		E4AFD696187E7A6F0012BCC0 /* highlight.js in Sources */ = {isa = PBXBuildFile; fileRef = E4AFD695187E7A6F0012BCC0 /* highlight.js */; };
 		E4AFD697187E7B8A0012BCC0 /* highlight.js in Resources */ = {isa = PBXBuildFile; fileRef = E4AFD695187E7A6F0012BCC0 /* highlight.js */; };
@@ -52,6 +53,8 @@
 
 /* Begin PBXFileReference section */
 		E40E313A187EA78500244639 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		E41ACB741945553E0006FD76 /* HURLSearchResultItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HURLSearchResultItem.h; sourceTree = "<group>"; };
+		E41ACB751945553E0006FD76 /* HURLSearchResultItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HURLSearchResultItem.m; sourceTree = "<group>"; };
 		E4AFD692187E54DD0012BCC0 /* HURLContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HURLContentViewController.h; sourceTree = "<group>"; };
 		E4AFD693187E54DD0012BCC0 /* HURLContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HURLContentViewController.m; sourceTree = "<group>"; };
 		E4AFD695187E7A6F0012BCC0 /* highlight.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = highlight.js; path = ../highlight.js; sourceTree = "<group>"; };
@@ -196,8 +199,8 @@
 		E4EEC72B187E3AD800A682D9 /* c.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = c.txt; path = ../c.txt; sourceTree = "<group>"; };
 		E4EEC72C187E3AD800A682D9 /* d.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = d.txt; path = ../d.txt; sourceTree = "<group>"; };
 		E4EEC72D187E3AD800A682D9 /* e.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = e.txt; path = ../e.txt; sourceTree = "<group>"; };
-		E4EEC733187E3B0700A682D9 /* HURLCluceneHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HURLCluceneHelper.h; sourceTree = "<group>"; };
-		E4EEC734187E3B0700A682D9 /* HURLCluceneHelper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HURLCluceneHelper.mm; sourceTree = "<group>"; };
+		E4EEC733187E3B0700A682D9 /* HURLCluceneHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HURLCluceneHelper.h; path = ../HURLCluceneHelper.h; sourceTree = "<group>"; };
+		E4EEC734187E3B0700A682D9 /* HURLCluceneHelper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = HURLCluceneHelper.mm; path = ../HURLCluceneHelper.mm; sourceTree = "<group>"; };
 		E4EEC736187E3CA500A682D9 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -228,6 +231,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E41ACB73194555270006FD76 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				E41ACB741945553E0006FD76 /* HURLSearchResultItem.h */,
+				E41ACB751945553E0006FD76 /* HURLSearchResultItem.m */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
 		E4E35A991941C2FD00A0DA9C /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -237,6 +249,8 @@
 				E4E35A941941C02700A0DA9C /* HURLUtils.m */,
 				E4E35A961941C0FC00A0DA9C /* HURLPathUtils.h */,
 				E4E35A971941C0FC00A0DA9C /* HURLPathUtils.m */,
+				E4EEC733187E3B0700A682D9 /* HURLCluceneHelper.h */,
+				E4EEC734187E3B0700A682D9 /* HURLCluceneHelper.mm */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -296,12 +310,11 @@
 		E4EEC679187E3A5900A682D9 /* clucene-ios-example */ = {
 			isa = PBXGroup;
 			children = (
+				E41ACB73194555270006FD76 /* Entities */,
 				E4EEC6A8187E3A9700A682D9 /* Clucene */,
 				E4E35A9B1941C35800A0DA9C /* Resources */,
 				E4E35A9A1941C33900A0DA9C /* Files */,
 				E4E35A991941C2FD00A0DA9C /* Utils */,
-				E4EEC733187E3B0700A682D9 /* HURLCluceneHelper.h */,
-				E4EEC734187E3B0700A682D9 /* HURLCluceneHelper.mm */,
 				E4EEC688187E3A5900A682D9 /* HURLViewController.h */,
 				E4EEC689187E3A5900A682D9 /* HURLViewController.m */,
 				E4AFD692187E54DD0012BCC0 /* HURLContentViewController.h */,
@@ -709,6 +722,7 @@
 				E4E35A921941BF5800A0DA9C /* HURLModalViewController.m in Sources */,
 				E4EEC680187E3A5900A682D9 /* main.m in Sources */,
 				E4E35A981941C0FD00A0DA9C /* HURLPathUtils.m in Sources */,
+				E41ACB761945553E0006FD76 /* HURLSearchResultItem.m in Sources */,
 				E4AFD696187E7A6F0012BCC0 /* highlight.js in Sources */,
 				E4EEC735187E3B0700A682D9 /* HURLCluceneHelper.mm in Sources */,
 				E4EEC684187E3A5900A682D9 /* HURLAppDelegate.m in Sources */,

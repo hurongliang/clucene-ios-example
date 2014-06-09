@@ -10,28 +10,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "clucene-ios-example/HURLViewController.m"
-            timestampString = "410943269.303507"
+            timestampString = "423970917.067083"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "100"
-            endingLineNumber = "100"
+            startingLineNumber = "75"
+            endingLineNumber = "75"
             landmarkName = "-tableView:didSelectRowAtIndexPath:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "clucene-ios-example/HURLCluceneHelper.mm"
-            timestampString = "411013874.568073"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "160"
-            endingLineNumber = "160"
-            landmarkName = "+search:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -58,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "clucene-ios-example/HURLCluceneHelper.mm"
-            timestampString = "411013874.568073"
+            timestampString = "423975503.221253"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "203"
-            endingLineNumber = "203"
+            startingLineNumber = "176"
+            endingLineNumber = "176"
             landmarkName = "+tchar2string:"
             landmarkType = "5">
          </BreakpointContent>
@@ -74,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "clucene-ios-example/HURLCluceneHelper.mm"
-            timestampString = "411013874.568073"
+            timestampString = "423975503.221253"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "207"
-            endingLineNumber = "207"
+            startingLineNumber = "180"
+            endingLineNumber = "180"
             landmarkName = "+string2char:"
             landmarkType = "5">
             <Locations>
@@ -120,11 +104,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "clucene-ios-example/HURLCluceneHelper.mm"
-            timestampString = "410944402.912868"
+            timestampString = "423975201.520728"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "116"
-            endingLineNumber = "116"
+            startingLineNumber = "93"
+            endingLineNumber = "93"
             landmarkName = "+createDocument:document:"
             landmarkType = "5">
             <Locations>
@@ -166,11 +150,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "clucene-ios-example/HURLCluceneHelper.mm"
-            timestampString = "410944582.930736"
+            timestampString = "423975201.520728"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "125"
-            endingLineNumber = "125"
+            startingLineNumber = "102"
+            endingLineNumber = "102"
             landmarkName = "+createDocument:document:"
             landmarkType = "5">
             <Locations>
@@ -211,13 +195,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "clucene-ios-example/HURLCluceneHelper.mm"
-            timestampString = "411013874.568073"
+            filePath = "clucene-ios-example/HURLPathUtils.m"
+            timestampString = "423971112.289842"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "154"
-            endingLineNumber = "154"
-            landmarkName = "+search:"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "+getAllFiles"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

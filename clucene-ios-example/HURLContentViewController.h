@@ -7,9 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HURLSearchResultItem.h"
 
 @interface HURLContentViewController : UIViewController<UIWebViewDelegate>
-@property(strong,nonatomic)NSString *filePath;
-@property(strong,nonatomic)NSString *fileName;
-@property(strong,nonatomic)NSString *searchText;
+@property(strong,nonatomic)HURLSearchResultItem *searchResult;
 @end
