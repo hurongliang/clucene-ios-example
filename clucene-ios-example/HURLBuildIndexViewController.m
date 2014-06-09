@@ -67,7 +67,7 @@
         UITableViewCell *cell = [self.fileTableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:index inSection:0]];
         cell.accessoryType = UITableViewCellAccessoryCheckmark;
     }
-    self.messageLabel.text = @"Index has been builded";
+    self.messageLabel.text = @"All files have been indexed.";
     [self.indicator stopAnimating];
 }
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{

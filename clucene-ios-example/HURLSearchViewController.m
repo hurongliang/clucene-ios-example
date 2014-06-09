@@ -74,7 +74,11 @@
 -(void)doSearch:(NSString *)searchText{
     if([searchText length]>=2){
         resultList = [HURLCluceneHelper searchFileList:[HURLPathUtils getAllFiles] withKeyword:searchText];
-        NSLog(@"Found %ld matched files.",(unsigned long)resultList.count);
+        if(resultList==nil || resultList.count==0){
+            NSLog(@"Not found.");
+        }else{
+            NSLog(@"Found %ld matched files.",(unsigned long)resultList.count);
+        }
         [self.tableView reloadData];
     }
 }
